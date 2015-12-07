@@ -36,7 +36,9 @@ namespace SimSpace_JAT
         /// </summary>
         private struct Cell
         {
+            //stores the image of the cell
             private Image _image;
+            //stores the rectangle for the cell for later calculations
             private Rectangle _rect;
             public Image Image
             {
@@ -108,11 +110,11 @@ namespace SimSpace_JAT
             : this()
         {
             //load all the data
-            
-            
             _planet.Load(filePath);
             //create the grid with the data after loaded
             CreateGrid(GRID_SIZE, GRID_SIZE);
+            //update scoreboard data
+            UpdateScoreBoard();
         }
 
         /// <summary>
@@ -381,8 +383,12 @@ namespace SimSpace_JAT
             UpdateScoreBoard();
         }
 
+        /// <summary>
+        /// Updates the scoreboard data on the side
+        /// </summary>
         private void UpdateScoreBoard()
         {
+            //display all the information in labels with proper formatting
             lblMoney.Text = String.Format("Money: {0:C}", _planet.Money);
             lblPopulation.Text = String.Format("Population: {0:n0}", _planet.CalculatePopulation());
             lblPollution.Text = String.Format("Pollution: {0:n0}", _planet.CalculatePollution());

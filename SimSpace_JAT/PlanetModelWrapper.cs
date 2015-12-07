@@ -210,19 +210,17 @@ namespace SimSpace_JAT
         /// <summary>
         /// Saves the score in the file provided
         /// </summary>
-        /// <param name="filePath">File path</param>
-        public void SaveScore(string filePath)
+        public void SaveHighScore()
         {
-            _jackModel.SaveScore(filePath);
+            _jackModel.SaveHighScore();
         }
 
         /// <summary>
         /// Loads the score from the file provided
         /// </summary>
-        /// <param name="filePath">File path</param>
-        public void LoadScore(string filePath)
+        public void LoadHighScore()
         {
-            _jackModel.LoadScore(filePath);
+            _jackModel.LoadHighScore();
         }
 
         /// <summary>

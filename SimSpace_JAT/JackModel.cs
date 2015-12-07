@@ -41,6 +41,11 @@ namespace SimSpace_JAT
         }
         public bool BuildFactory(int a, int s)
         {
+            if (_variables.Facilities[a, s] is Dirt)
+            {
+                _variables.Facilities[a, s] = new Factory();
+                return true;
+            }
             return false;
         }
         public bool BuildEnvironmentalFacility(int a, int s)
@@ -55,10 +60,10 @@ namespace SimSpace_JAT
         {
             return 6000;
         }
-        public void SaveScore(string filePath)
+        public void SaveHighScore()
         {
         }
-        public void LoadScore(string filePath)
+        public void LoadHighScore()
         {
         }
     }

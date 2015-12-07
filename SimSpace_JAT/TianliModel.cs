@@ -259,7 +259,8 @@ namespace SimSpace_JAT
                     sr.WriteLine("[SIZE]");
                     sr.WriteLine(_variables.NumRows);
                     //save the score
-                    _wrapper.SaveScore(filePath);
+                    sr.WriteLine("[SCORE]");
+                    sr.WriteLine(_variables.Score);
                     //save the money
                     sr.WriteLine("[MONEY]");
                     sr.WriteLine(_variables.Money);
