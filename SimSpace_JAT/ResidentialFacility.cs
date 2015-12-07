@@ -17,13 +17,19 @@ namespace SimSpace_JAT
         protected int _maxPopulation;
         //stores the amount of population
         protected int _population;
-        //stores the time this facility was created during the month
-        protected int _timeCreated;
         //stores the factor to divide the population by, to get the happy population
         protected int _happyPopulationFactor;
         //stores the factor to divide the max population by, to get the increase for population
         protected const int POPULATION_GROWTH_FACTOR = 10;
 
+        /// <summary>
+        /// Called by child classes' constructors to create a residential facility with an initial population, used in loading the game
+        /// </summary>
+        /// <param name="population">Population the facility starts with</param>
+        protected ResidentialFacility(int population)
+        {
+            Population = population;
+        }
         /// <summary>
         /// Gets or sets the population
         /// </summary>
@@ -36,20 +42,6 @@ namespace SimSpace_JAT
             protected set
             {
                 _population = value;
-            }
-        }
-        /// <summary>
-        /// Gets or sets the time this facility was created
-        /// </summary>
-        public int TimeCreated
-        {
-            get
-            {
-                return _timeCreated;
-            }
-            set
-            {
-                _timeCreated = value;
             }
         }
 
@@ -77,7 +69,31 @@ namespace SimSpace_JAT
         /// <returns>Boolean indicating if it's all filled up</returns>
         protected bool IsFilled()
         {
-            return Population == _maxPopulation;
+            return Population >= _maxPopulation;
+        }
+
+        /// <summary>
+        /// Gets the revenue, pre-calculated based on population
+        /// </summary>
+        public override int Revenue
+        {
+            get
+            {
+                return base.Revenue * Population / 1000;
+            }
+        }
+        /// <summary>
+        /// Gets the population, pre-calculated base on population
+        /// </summary>
+        public override int Pollution
+        {
+            get
+            {
+                if (IsFilled())
+                    return base.Pollution;
+                else
+                    return 0;
+            }
         }
     }
 }

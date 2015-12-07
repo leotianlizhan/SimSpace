@@ -45,29 +45,44 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AffordableHome.cs" />
+    <Compile Include="AndrewModel.cs" />
     <Compile Include="ComfortableHome.cs" />
+    <Compile Include="CommercialFacility.cs" />
     <Compile Include="Dirt.cs" />
+    <Compile Include="EmergencyServices.cs" />
+    <Compile Include="EnvironmentalFacility.cs" />
+    <Compile Include="EssentialServicesFacility.cs" />
     <Compile Include="Facility.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Factory.cs" />
+    <Compile Include="GovernmentFacility.cs" />
+    <Compile Include="LevelSelectorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="LevelSelectorForm.Designer.cs">
+      <DependentUpon>LevelSelectorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="JackModel.cs" />
     <Compile Include="LuxuryHome.cs" />
+    <Compile Include="MedicalFacility.cs" />
+    <Compile Include="Office.cs" />
+    <Compile Include="PlanetModelWrapper.cs" />
     <Compile Include="PlanetTianliForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PlanetTianliForm.Designer.cs">
       <DependentUpon>PlanetTianliForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Powerplant.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResidentialFacility.cs" />
+    <Compile Include="Restaurant.cs" />
+    <Compile Include="School.cs" />
     <Compile Include="SharedVariables.cs" />
+    <Compile Include="Store.cs" />
     <Compile Include="TianliModel.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="LevelSelectorForm.resx">
+      <DependentUpon>LevelSelectorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlanetTianliForm.resx">
       <DependentUpon>PlanetTianliForm.cs</DependentUpon>
@@ -120,12 +135,6 @@
     <None Include="Resources\Affordable_Home.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Affordable_Home_2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Affordable_Home_3.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Factory.png" />
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +148,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Office.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Factory.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affordable_Home_Cursor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comfortable_Home_Cursor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emergency_Cursor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Environmental_Cursor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Factory_Cursor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Government_Cursor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luxury_Home_Cursor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Medical_Cursor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Office_Cursor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Powerplant_Cursor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restaurant_Cursor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\School_Cursor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Store_Cursor.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

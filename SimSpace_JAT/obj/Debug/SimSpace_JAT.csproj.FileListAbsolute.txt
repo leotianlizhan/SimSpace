@@ -9,5 +9,5 @@ F:\CS12\SimSpace_JAT\SimSpace_JAT\obj\Debug\SimSpace_JAT.exe
 F:\CS12\SimSpace_JAT\SimSpace_JAT\obj\Debug\SimSpace_JAT.pdb
 E:\CS12\SimSpace_JAT\SimSpace_JAT\obj\Debug\SimSpace_JAT.exe
 E:\CS12\SimSpace_JAT\SimSpace_JAT\obj\Debug\SimSpace_JAT.pdb
-F:\CS12\SimSpace_JAT\SimSpace_JAT\obj\Debug\SimSpace_JAT.Form1.resources
 F:\CS12\SimSpace_JAT\SimSpace_JAT\obj\Debug\SimSpace_JAT.PlanetTianliForm.resources
+F:\CS12\SimSpace_JAT\SimSpace_JAT\obj\Debug\SimSpace_JAT.LevelSelectorForm.resources

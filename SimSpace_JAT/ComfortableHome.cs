@@ -12,11 +12,15 @@ namespace SimSpace_JAT
     class ComfortableHome : ResidentialFacility
     {
         /// <summary>
-        /// Creates a ComfortableHome facility
+        /// cost to build the comfortable home
         /// </summary>
-        public ComfortableHome()
+        public const int COST = 500000000;
+        /// <summary>
+        /// Creates a ComfortableHome facility with certain population
+        /// </summary>
+        public ComfortableHome(int population)
+            : base(population)
         {
-            Cost = 500000000;
             Maintenance = 1000000;
             Revenue = 100000;
             Power = 50;
@@ -24,5 +28,9 @@ namespace SimSpace_JAT
             _happyPopulationFactor = 4;
             _maxPopulation = 15000;
         }
+        /// <summary>
+        /// Creates a comfortable home facility initially, with no population
+        /// </summary>
+        public ComfortableHome() : this(0) { }
     }
 }

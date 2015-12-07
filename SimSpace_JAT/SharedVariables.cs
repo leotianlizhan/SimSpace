@@ -1,4 +1,5 @@
 ﻿// Written by Andrew Pang | Team members: Tianli, Jack
+// Date: Sunday, December 6, 2015
 // ICS4U Assignment 2 (SimSpace)
 // This is the shared variables class, where variables that are universal between classes are set/declared
 using System;
@@ -24,6 +25,19 @@ namespace SimSpace_JAT
         // The length of each month, in seconds
         public const int MONTH = 10;
 
+        // Construct a new random generator object
+        private static Random _numberGenerator = new Random();
+
+        // Create a number generator object
+        public static Random NumberGenerator
+        {
+            get
+            {
+                return _numberGenerator;
+            }
+        }
+
+        
         // ||***STRUCTURE ID VALUES***||
         // The structure ID of Dirt (unused land)
         public const int DIRT = -1;
@@ -55,8 +69,10 @@ namespace SimSpace_JAT
         public const int OFFICE = 12;
         // ||*************************||
 
-        // JUST IN CASE
-        private long _money;
+        // Create a private long variable to store the money
+        private static long _money;
+        // Create a private integer variable to store the score
+        private static int _score;
 
         // The private 2D array of facilities
         private Facility[,] _facilities;
@@ -89,6 +105,43 @@ namespace SimSpace_JAT
             set
             {
                 _money = value;
+            }
+        }
+
+        /// <summary>
+        /// The number of rows in the map.
+        /// </summary>
+        public int NumRows
+        {
+            get
+            {
+                return Facilities.GetLength(ROW);
+            }
+        }
+
+        /// <summary>
+        /// The number of columns in the map.
+        /// </summary>
+        public int NumCols
+        {
+            get
+            {
+                return Facilities.GetLength(COL);
+            }
+        }
+
+        /// <summary>
+        /// The score the player has accumulated. This value can be negative.
+        /// </summary>
+        public int Score
+        {
+            get
+            {
+                return _score;
+            }
+            set
+            {
+                _score = value;
             }
         }
     }

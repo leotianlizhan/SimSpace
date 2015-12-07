@@ -16,7 +16,6 @@ namespace SimSpace_JAT
         /// </summary>
         public Dirt()
         {
-            Cost = 0;
             Maintenance = 0;
             Revenue = 0;
             Power = 0;

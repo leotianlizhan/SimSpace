@@ -71,22 +71,12 @@ namespace SimSpace_JAT.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Bitmap Affordable_Home_2 {
+        internal static System.Drawing.Icon Affordable_Home_Cursor {
             get {
-                object obj = ResourceManager.GetObject("Affordable_Home_2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Affordable_Home_3 {
-            get {
-                object obj = ResourceManager.GetObject("Affordable_Home_3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                object obj = ResourceManager.GetObject("Affordable_Home_Cursor", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -101,12 +91,42 @@ namespace SimSpace_JAT.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Comfortable_Home_Cursor {
+            get {
+                object obj = ResourceManager.GetObject("Comfortable_Home_Cursor", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Emergency_Cursor {
+            get {
+                object obj = ResourceManager.GetObject("Emergency_Cursor", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Emergency_Services {
             get {
                 object obj = ResourceManager.GetObject("Emergency_Services", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Environmental_Cursor {
+            get {
+                object obj = ResourceManager.GetObject("Environmental_Cursor", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -131,12 +151,32 @@ namespace SimSpace_JAT.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Factory_Cursor {
+            get {
+                object obj = ResourceManager.GetObject("Factory_Cursor", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Government {
             get {
                 object obj = ResourceManager.GetObject("Government", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Government_Cursor {
+            get {
+                object obj = ResourceManager.GetObject("Government_Cursor", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -151,12 +191,32 @@ namespace SimSpace_JAT.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Luxury_Home_Cursor {
+            get {
+                object obj = ResourceManager.GetObject("Luxury_Home_Cursor", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Medical {
             get {
                 object obj = ResourceManager.GetObject("Medical", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Medical_Cursor {
+            get {
+                object obj = ResourceManager.GetObject("Medical_Cursor", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -171,12 +231,32 @@ namespace SimSpace_JAT.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Office_Cursor {
+            get {
+                object obj = ResourceManager.GetObject("Office_Cursor", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Power_Plant {
             get {
                 object obj = ResourceManager.GetObject("Power_Plant", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Powerplant_Cursor {
+            get {
+                object obj = ResourceManager.GetObject("Powerplant_Cursor", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -191,6 +271,16 @@ namespace SimSpace_JAT.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Restaurant_Cursor {
+            get {
+                object obj = ResourceManager.GetObject("Restaurant_Cursor", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap School {
@@ -201,12 +291,32 @@ namespace SimSpace_JAT.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon School_Cursor {
+            get {
+                object obj = ResourceManager.GetObject("School_Cursor", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Store {
             get {
                 object obj = ResourceManager.GetObject("Store", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Store_Cursor {
+            get {
+                object obj = ResourceManager.GetObject("Store_Cursor", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
     }

@@ -121,17 +121,23 @@
   <data name="Affordable_Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Affordable_Home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Affordable_Home_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Affordable_Home_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Affordable_Home_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Affordable_Home_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Affordable_Home_Cursor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affordable_Home_Cursor.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Comfortable_Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Comfortable_Home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Comfortable_Home_Cursor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Comfortable_Home_Cursor.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Emergency_Cursor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Emergency_Cursor.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Emergency_Services" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Emergency_Services.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Environmental_Cursor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Environmental_Cursor.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Environmental_Facility" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Environmental_Facility.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,17 +145,35 @@
   <data name="Factory" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Factory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Factory_Cursor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Factory_Cursor.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Government" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Government.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Government_Cursor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Government_Cursor.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Luxury_Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Luxury_Home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Luxury_Home_Cursor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Luxury_Home_Cursor.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Medical" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Medical.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Medical_Cursor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Medical_Cursor.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Office" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Office.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Office_Cursor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Office_Cursor.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Powerplant_Cursor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Powerplant_Cursor.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Power_Plant" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Power_Plant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,10 +181,19 @@
   <data name="Restaurant" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Restaurant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Restaurant_Cursor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Restaurant_Cursor.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="School" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\School.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="School_Cursor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\School_Cursor.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Store" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Store.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Store_Cursor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Store_Cursor.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
