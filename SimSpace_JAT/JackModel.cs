@@ -32,6 +32,11 @@ namespace SimSpace_JAT
         }
         public bool BuildPowerPlant(int a, int s)
         {
+            if (_variables.Facilities[a, s] is Dirt)
+            {
+                _variables.Facilities[a, s] = new Powerplant();
+                return true;
+            }
             return false;
         }
         public bool BuildFactory(int a, int s)

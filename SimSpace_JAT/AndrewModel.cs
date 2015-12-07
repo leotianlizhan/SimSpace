@@ -309,7 +309,7 @@ namespace SimSpace_JAT
                 int score;
                 // Create a long variable to store the money 
                 long money;
-                Regex re = new Regex(@"^(\d+):(\d+):(\d+):(\d+):(\d+)$");
+                Regex re = new Regex(@"^(\d+):(\d+):(\d+):(\d+)$");
                 // Create a new int array to store the facility ID and its metadata for one line
                 int[] facilityValues = new int[4];
 

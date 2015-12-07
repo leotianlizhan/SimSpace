@@ -32,11 +32,11 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.tmrTimer = new System.Windows.Forms.Timer(this.components);
             this.pnlScoreBoard = new System.Windows.Forms.Panel();
-            this.lblScore = new System.Windows.Forms.Label();
-            this.lblMoney = new System.Windows.Forms.Label();
-            this.lblPower = new System.Windows.Forms.Label();
-            this.lblPollution = new System.Windows.Forms.Label();
             this.lblPopulation = new System.Windows.Forms.Label();
+            this.lblPollution = new System.Windows.Forms.Label();
+            this.lblPower = new System.Windows.Forms.Label();
+            this.lblMoney = new System.Windows.Forms.Label();
+            this.lblScore = new System.Windows.Forms.Label();
             this.pnlScoreBoard.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,26 +70,25 @@
             this.pnlScoreBoard.TabIndex = 1;
             this.pnlScoreBoard.Visible = false;
             // 
-            // lblScore
+            // lblPopulation
             // 
-            this.lblScore.AutoSize = true;
-            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.ForeColor = System.Drawing.Color.Lime;
-            this.lblScore.Location = new System.Drawing.Point(22, 16);
-            this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(85, 31);
-            this.lblScore.TabIndex = 0;
-            this.lblScore.Text = "Score";
+            this.lblPopulation.AutoSize = true;
+            this.lblPopulation.ForeColor = System.Drawing.Color.Lime;
+            this.lblPopulation.Location = new System.Drawing.Point(25, 138);
+            this.lblPopulation.Name = "lblPopulation";
+            this.lblPopulation.Size = new System.Drawing.Size(57, 13);
+            this.lblPopulation.TabIndex = 4;
+            this.lblPopulation.Text = "Population";
             // 
-            // lblMoney
+            // lblPollution
             // 
-            this.lblMoney.AutoSize = true;
-            this.lblMoney.ForeColor = System.Drawing.Color.Lime;
-            this.lblMoney.Location = new System.Drawing.Point(25, 136);
-            this.lblMoney.Name = "lblMoney";
-            this.lblMoney.Size = new System.Drawing.Size(39, 13);
-            this.lblMoney.TabIndex = 1;
-            this.lblMoney.Text = "Money";
+            this.lblPollution.AutoSize = true;
+            this.lblPollution.ForeColor = System.Drawing.Color.Lime;
+            this.lblPollution.Location = new System.Drawing.Point(25, 111);
+            this.lblPollution.Name = "lblPollution";
+            this.lblPollution.Size = new System.Drawing.Size(47, 13);
+            this.lblPollution.TabIndex = 3;
+            this.lblPollution.Text = "Pollution";
             // 
             // lblPower
             // 
@@ -101,25 +100,26 @@
             this.lblPower.TabIndex = 2;
             this.lblPower.Text = "Power";
             // 
-            // lblPollution
+            // lblMoney
             // 
-            this.lblPollution.AutoSize = true;
-            this.lblPollution.ForeColor = System.Drawing.Color.Lime;
-            this.lblPollution.Location = new System.Drawing.Point(25, 109);
-            this.lblPollution.Name = "lblPollution";
-            this.lblPollution.Size = new System.Drawing.Size(47, 13);
-            this.lblPollution.TabIndex = 3;
-            this.lblPollution.Text = "Pollution";
+            this.lblMoney.AutoSize = true;
+            this.lblMoney.ForeColor = System.Drawing.Color.Lime;
+            this.lblMoney.Location = new System.Drawing.Point(25, 57);
+            this.lblMoney.Name = "lblMoney";
+            this.lblMoney.Size = new System.Drawing.Size(39, 13);
+            this.lblMoney.TabIndex = 1;
+            this.lblMoney.Text = "Money";
             // 
-            // lblPopulation
+            // lblScore
             // 
-            this.lblPopulation.AutoSize = true;
-            this.lblPopulation.ForeColor = System.Drawing.Color.Lime;
-            this.lblPopulation.Location = new System.Drawing.Point(25, 58);
-            this.lblPopulation.Name = "lblPopulation";
-            this.lblPopulation.Size = new System.Drawing.Size(57, 13);
-            this.lblPopulation.TabIndex = 4;
-            this.lblPopulation.Text = "Population";
+            this.lblScore.AutoSize = true;
+            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.ForeColor = System.Drawing.Color.Lime;
+            this.lblScore.Location = new System.Drawing.Point(13, 15);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(90, 31);
+            this.lblScore.TabIndex = 0;
+            this.lblScore.Text = "Score";
             // 
             // PlanetTianliForm
             // 

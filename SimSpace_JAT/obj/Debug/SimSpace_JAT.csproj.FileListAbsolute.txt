@@ -11,3 +11,10 @@ E:\CS12\SimSpace_JAT\SimSpace_JAT\obj\Debug\SimSpace_JAT.exe
 E:\CS12\SimSpace_JAT\SimSpace_JAT\obj\Debug\SimSpace_JAT.pdb
 F:\CS12\SimSpace_JAT\SimSpace_JAT\obj\Debug\SimSpace_JAT.PlanetTianliForm.resources
 F:\CS12\SimSpace_JAT\SimSpace_JAT\obj\Debug\SimSpace_JAT.LevelSelectorForm.resources
+E:\CS12\SimSpace_JAT\SimSpace_JAT\bin\Debug\SimSpace_JAT.exe
+E:\CS12\SimSpace_JAT\SimSpace_JAT\bin\Debug\SimSpace_JAT.pdb
+E:\CS12\SimSpace_JAT\SimSpace_JAT\obj\Debug\SimSpace_JAT.csprojResolveAssemblyReference.cache
+E:\CS12\SimSpace_JAT\SimSpace_JAT\obj\Debug\SimSpace_JAT.LevelSelectorForm.resources
+E:\CS12\SimSpace_JAT\SimSpace_JAT\obj\Debug\SimSpace_JAT.PlanetTianliForm.resources
+E:\CS12\SimSpace_JAT\SimSpace_JAT\obj\Debug\SimSpace_JAT.Properties.Resources.resources
+E:\CS12\SimSpace_JAT\SimSpace_JAT\obj\Debug\SimSpace_JAT.csproj.GenerateResource.Cache

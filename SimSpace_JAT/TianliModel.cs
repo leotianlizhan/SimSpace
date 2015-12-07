@@ -236,6 +236,8 @@ namespace SimSpace_JAT
         {
             //update the money
             _variables.Money = CalculateMoney();
+            //calculate the score
+            _variables.Score = _wrapper.CalculateScore();
             //update the population
             UpdateAllPopulation();
         }
@@ -267,46 +269,49 @@ namespace SimSpace_JAT
                     for (int i = 0; i < _variables.NumRows; i++)
                         for (int j = 0; j < _variables.NumCols; j++)
                         {
-                            //save the facility type
-                            if (_variables.Facilities[i, j] is EmergencyServices)
-                                sr.Write(SharedVariables.EMERGENCY_SERVICES);
-                            else if (_variables.Facilities[i, j] is School)
-                                sr.Write(SharedVariables.SCHOOL);
-                            else if (_variables.Facilities[i, j] is MedicalFacility)
-                                sr.Write(SharedVariables.MEDICAL);
-                            else if (_variables.Facilities[i, j] is GovernmentFacility)
-                                sr.Write(SharedVariables.GOVERNMENT);
-                            else if (_variables.Facilities[i, j] is Powerplant)
-                                sr.Write(SharedVariables.POWER_PLANT);
-                            else if (_variables.Facilities[i, j] is LuxuryHome)
-                                sr.Write(SharedVariables.LUXURY_HOME);
-                            else if (_variables.Facilities[i, j] is ComfortableHome)
-                                sr.Write(SharedVariables.COMFORTABLE_HOME);
-                            else if (_variables.Facilities[i, j] is AffordableHome)
-                                sr.Write(SharedVariables.AFFORDABLE_HOME);
-                            else if (_variables.Facilities[i, j] is Factory)
-                                sr.Write(SharedVariables.FACTORY);
-                            else if (_variables.Facilities[i, j] is EnvironmentalFacility)
-                                sr.Write(SharedVariables.ENVIRONMENTAL_FACILITY);
-                            else if (_variables.Facilities[i, j] is Store)
-                                sr.Write(SharedVariables.STORE);
-                            else if (_variables.Facilities[i, j] is Restaurant)
-                                sr.Write(SharedVariables.RESTAURANT);
-                            else if (_variables.Facilities[i, j] is Office)
-                                sr.Write(SharedVariables.OFFICE);
-                            sr.Write(":");
-                            //save the facility location
-                            sr.Write(i + ":" + j);
-                            //save the population if it's a residential facility
-                            if (_variables.Facilities[i, j] is ResidentialFacility)
+                            if (!(_variables.Facilities[i, j] is Dirt))
                             {
-                                sr.Write(":" + ((ResidentialFacility)(_variables.Facilities[i, j])).Population);
+                                //save the facility type
+                                if (_variables.Facilities[i, j] is EmergencyServices)
+                                    sr.Write(SharedVariables.EMERGENCY_SERVICES);
+                                else if (_variables.Facilities[i, j] is School)
+                                    sr.Write(SharedVariables.SCHOOL);
+                                else if (_variables.Facilities[i, j] is MedicalFacility)
+                                    sr.Write(SharedVariables.MEDICAL);
+                                else if (_variables.Facilities[i, j] is GovernmentFacility)
+                                    sr.Write(SharedVariables.GOVERNMENT);
+                                else if (_variables.Facilities[i, j] is Powerplant)
+                                    sr.Write(SharedVariables.POWER_PLANT);
+                                else if (_variables.Facilities[i, j] is LuxuryHome)
+                                    sr.Write(SharedVariables.LUXURY_HOME);
+                                else if (_variables.Facilities[i, j] is ComfortableHome)
+                                    sr.Write(SharedVariables.COMFORTABLE_HOME);
+                                else if (_variables.Facilities[i, j] is AffordableHome)
+                                    sr.Write(SharedVariables.AFFORDABLE_HOME);
+                                else if (_variables.Facilities[i, j] is Factory)
+                                    sr.Write(SharedVariables.FACTORY);
+                                else if (_variables.Facilities[i, j] is EnvironmentalFacility)
+                                    sr.Write(SharedVariables.ENVIRONMENTAL_FACILITY);
+                                else if (_variables.Facilities[i, j] is Store)
+                                    sr.Write(SharedVariables.STORE);
+                                else if (_variables.Facilities[i, j] is Restaurant)
+                                    sr.Write(SharedVariables.RESTAURANT);
+                                else if (_variables.Facilities[i, j] is Office)
+                                    sr.Write(SharedVariables.OFFICE);
+                                sr.Write(":");
+                                //save the facility location
+                                sr.Write(i + ":" + j);
+                                //save the population if it's a residential facility
+                                if (_variables.Facilities[i, j] is ResidentialFacility)
+                                {
+                                    sr.Write(":" + ((ResidentialFacility)(_variables.Facilities[i, j])).Population);
+                                }
+                                //otherwise save population as 0
+                                else
+                                    sr.Write(":0");
+                                //make a new line
+                                sr.WriteLine();
                             }
-                            //otherwise save population as 0
-                            else
-                                sr.Write(":0");
-                            //make a new line
-                            sr.WriteLine();
                         }
                     //end of the file
                     sr.WriteLine("[END]");

@@ -108,6 +108,8 @@ namespace SimSpace_JAT
             : this()
         {
             //load all the data
+            
+            
             _planet.Load(filePath);
             //create the grid with the data after loaded
             CreateGrid(GRID_SIZE, GRID_SIZE);
@@ -350,6 +352,7 @@ namespace SimSpace_JAT
                                 _planet.BuildRestaurant(i, j);
                             else
                                 _planet.BuildOffice(i, j);
+                            UpdateScoreBoard();
                         }
                 //reset the mouse cursor to normal
                 this.Cursor = Cursors.Default;
@@ -374,6 +377,17 @@ namespace SimSpace_JAT
         {
             //update the data every month
             _planet.UpdateTime();
+            //update the score board
+            UpdateScoreBoard();
+        }
+
+        private void UpdateScoreBoard()
+        {
+            lblMoney.Text = String.Format("Money: {0:C}", _planet.Money);
+            lblPopulation.Text = String.Format("Population: {0:n0}", _planet.CalculatePopulation());
+            lblPollution.Text = String.Format("Pollution: {0:n0}", _planet.CalculatePollution());
+            lblPower.Text = String.Format("Power: {0:n0}", _planet.CalculatePower());
+            lblScore.Text = String.Format("Score: {0:n0}", _planet.Score);
         }
     }
 }
