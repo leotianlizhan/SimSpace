@@ -616,7 +616,9 @@ namespace SimSpace_JAT
             }
             catch (Exception e)
             {
+                // Just in case there is an unhandled exception
                 Logger(e.ToString(), 2);
+                // Exit the function because a fatal error occurred
                 return false;
             }
         }
