@@ -73,6 +73,8 @@ namespace SimSpace_JAT
         private static long _money;
         // Create a private integer variable to store the score
         private static int _score;
+        // Create a private static integer variable to store the highscore
+        private static int _highscore;
 
         // The private 2D array of facilities
         private Facility[,] _facilities;
@@ -142,6 +144,21 @@ namespace SimSpace_JAT
             set
             {
                 _score = value;
+            }
+        }
+        
+        /// <summary>
+        /// The highest score the player has accumulated. This value can be negative.
+        /// </summary>
+        public int Highscore
+        {
+            get
+            {
+                return _highscore;
+            }
+            set
+            {
+                _highscore = value;
             }
         }
     }
