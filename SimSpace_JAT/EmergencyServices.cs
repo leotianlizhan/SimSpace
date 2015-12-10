@@ -1,4 +1,7 @@
-﻿using System;
+// WHOEVER'S CLASS THIS IS
+// DO YOUR BLOODY HEADER
+// December 10, 2015
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
