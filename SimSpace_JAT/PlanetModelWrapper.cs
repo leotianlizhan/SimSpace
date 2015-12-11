@@ -165,7 +165,7 @@ namespace SimSpace_JAT
         }
 
         // Creates the public integer and returns CalculateScore from JackModel
-        public long CalculateScore()
+        public int CalculateScore()
         {
             return _jackModel.CalculateScore();
         }
