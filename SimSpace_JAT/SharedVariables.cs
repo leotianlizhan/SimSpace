@@ -1,4 +1,4 @@
-﻿// Written by Andrew Pang | Team members: Tianli, Jack
+// Written by Andrew Pang | Team members: Tianli, Jack
 // Date: Sunday, December 6, 2015
 // ICS4U Assignment 2 (SimSpace)
 // This is the shared variables class, where variables that are universal between classes are set/declared
@@ -37,7 +37,7 @@ namespace SimSpace_JAT
             }
         }
 
-        
+
         // ||***STRUCTURE ID VALUES***||
         // The structure ID of Dirt (unused land)
         public const int DIRT = -1;
@@ -70,15 +70,17 @@ namespace SimSpace_JAT
         // ||*************************||
 
         // Create a private long variable to store the money
-        private static long _money;
+        private long _money;
         // Create a private integer variable to store the score
-        private static int _score;
-        // Create a private static integer variable to store the highscore
-        private static int _highscore;
+        private int _score;
+        // Create a private integer variable to store the highscore
+        private int _highscore;
+        // Create a private integer variable to store the elapsed time
+        private int _timeElapsed;
 
         // The private 2D array of facilities
         private Facility[,] _facilities;
-        
+
         /// <summary>
         /// The public 2D array of facilities that the player builds
         /// </summary>
@@ -146,7 +148,7 @@ namespace SimSpace_JAT
                 _score = value;
             }
         }
-        
+
         /// <summary>
         /// The highest score the player has accumulated. This value can be negative.
         /// </summary>
@@ -159,6 +161,29 @@ namespace SimSpace_JAT
             set
             {
                 _highscore = value;
+            }
+        }
+
+        /// <summary>
+        /// The time that has elapsed since the game started.
+        /// </summary>
+        public int TimeElapsed
+        {
+            get
+            {
+                return _timeElapsed;
+            }
+            set
+            {
+                // Check if the time elapsed input is positive
+                if (_timeElapsed >= 0)
+                {
+                    _timeElapsed = value;
+                }
+                else // if negative
+                {
+                    _timeElapsed = 0;
+                }
             }
         }
     }
