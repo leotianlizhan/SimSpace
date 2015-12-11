@@ -368,7 +368,7 @@ namespace SimSpace_JAT
                             // Get and store the next line
                             line = sr.ReadLine();
                             // Use regex to check if the line below the TIME header contains a digit repeated greater than zero times, from start to end
-                            if (Regex.IsMatch(line, @"^(\-?\d+)$"))
+                            if (Regex.IsMatch(line, @"^(\d+)$"))
                             {
                                 // Convert the current input line to an integer
                                 int.TryParse(line, out time);
