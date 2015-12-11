@@ -309,6 +309,9 @@ namespace SimSpace_JAT
                 int score;
                 // Create a long variable to store the money 
                 long money;
+                // Create an integer variable to store the total time elapsed
+                int time;
+                // Instantiate a new regex object with a a regex pattern that checks for a digit, repeated more than one times
                 Regex re = new Regex(@"^(\d+):(\d+):(\d+):(\d+)$");
                 // Create a new int array to store the facility ID and its metadata for one line
                 int[] facilityValues = new int[4];
@@ -356,7 +359,42 @@ namespace SimSpace_JAT
                             // Exit the function
                             return false;
                         }
+                        
+                        // Get and store the next line
+                        line = sr.ReadLine();
+                        // Check if the line matches the section header for the time elapsed
+                        if (line == "[TIME]")
+                        {
+                            // Get and store the next line
+                            line = sr.ReadLine();
+                            // Use regex to check if the line below the TIME header contains a digit repeated greater than zero times, from start to end
+                            if (Regex.IsMatch(line, @"^(\-?\d+)$"))
+                            {
+                                // Convert the current input line to an integer
+                                int.TryParse(line, out time);
 
+                                // Assign the value of the time from the saved game file to the ingame score counting variable
+                                _variables.TimeElapsed = time;
+
+                                // Report to the log file that the time was successfully retrieved from the game save file
+                                Logger("A saved game elapsed time of " + time.ToString() + " was found in the game save file located at: " + filePath + ".", 0);
+                            }
+                            else // if the line below the TIME header was not an integer
+                            {
+                                // Report to log file that the file did not store an integer value to denote time elapsed
+                                Logger("Game save file at: " + filePath + " did not store an integer value for the elapsed time.", 2);
+                                // Exit the procedure
+                                return false;
+                            }
+                        }
+                        else // if the section header for time was not found
+                        {
+                            // Report to debug file that the file did not start with the section header for time
+                            Logger("Game save file at: " + filePath + " did not start with the section header for map elapsed time where expected.", 2);
+                            // Exit the function
+                            return false;
+                        }
+                        
                         // Get and store the next line
                         line = sr.ReadLine();
                         // Check if the line matches the section header for the score
