@@ -1,4 +1,4 @@
-﻿// Written by Jack Wen | Team members: Andrew, Tianli [Yes, I stole this formatting]
+// Written by Jack Wen | Team members: Andrew, Tianli [Yes, I stole this formatting]
 // ICS4U Assignment 2 (SimSpace)
 // This is the PlanetModelWrapper class where the variables across the program are recreated and returned
 using System;
@@ -33,7 +33,7 @@ namespace SimSpace_JAT
                 for (int j = 0; j < numCols; j++)
                     _variables.Facilities[i, j] = new Dirt();
 
-            _andrewModel = new AndrewModel(this, _variables); 
+            _andrewModel = new AndrewModel(this, _variables);
             _tianliModel = new TianliModel(this, _variables);
             _jackModel = new JackModel(this, _variables);
         }
@@ -165,7 +165,7 @@ namespace SimSpace_JAT
         }
 
         // Creates the public integer and returns CalculateScore from JackModel
-        public int CalculateScore()
+        public long CalculateScore()
         {
             return _jackModel.CalculateScore();
         }
