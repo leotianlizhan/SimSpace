@@ -1,6 +1,6 @@
-// Written by: Jack Wen | Team Members: Andrew, Tianli 
+// Written by: Jack Wen | Team Members: Andrew, Tianli
 // Date: December 11, 2015
-// Abstract IndustrialFacility that contains variables that are shared by all child classes, such as EnvironmentalFacility
+// Abstract EssentialServicesFacility class that contains all the values shared in all of the child classes
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +9,15 @@ using System.Threading.Tasks;
 
 namespace SimSpace_JAT
 {
-    abstract class IndustrialFacility : Facility
+    abstract class EssentialServicesFacility : Facility
     {
-        public const int RANGE_LIMIT = 6;
+        /// <summary>
+        /// Sets the default revenue and pollution for the child classes
+        /// </summary>
+        public EssentialServicesFacility()
+        {
+            Revenue = 0;
+            Pollution = 0;
+        }
     }
 }
