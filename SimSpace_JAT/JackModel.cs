@@ -232,7 +232,7 @@ namespace SimSpace_JAT
         }
 
         // Calculates the total Score of the planet
-        public long CalculateScore()
+        public int CalculateScore()
         {
             // Sets contentedPopulation as an integer and finds it by subtracting the happypopulation from the population of the planet
             int contentedPopulation = _wrapper.CalculatePopulation() - _wrapper.CalculateHappyPopulation();
