@@ -98,6 +98,8 @@ namespace SimSpace_JAT
             CreateToolbar();
             //initializes the side options
             InitSideOptions();
+            //update the scoreboard
+            UpdateScoreBoard();
             //start the timer
             tmrTimer.Start();
         }
@@ -325,36 +327,41 @@ namespace SimSpace_JAT
                     for(int j = 0; j < GRID_SIZE; j++)
                         if (_grid[i, j].Rect.Contains(e.Location) && _highlightedGrid[i, j])
                         {
-                            //set the grid image to the one you want to build
-                            _grid[i, j].Image = _toolbar[_selectedToolbarItem].Image;
+                            //stores the result from building, if it's unsuccessful or not
+                            bool successful = false;
                             //find out which one the user wants to build and build it accordingly
                             if (_selectedToolbarItem == SharedVariables.EMERGENCY_SERVICES)
-                                _planet.BuildEmergencyServices(i, j);
+                                successful = _planet.BuildEmergencyServices(i, j);
                             else if (_selectedToolbarItem == SharedVariables.SCHOOL)
-                                _planet.BuildSchool(i, j);
+                                successful = _planet.BuildSchool(i, j);
                             else if (_selectedToolbarItem == SharedVariables.MEDICAL)
-                                _planet.BuildMedicalFacility(i, j);
+                                successful = _planet.BuildMedicalFacility(i, j);
                             else if (_selectedToolbarItem == SharedVariables.GOVERNMENT)
-                                _planet.BuildGovernmentFacility(i, j);
+                                successful = _planet.BuildGovernmentFacility(i, j);
                             else if (_selectedToolbarItem == SharedVariables.POWER_PLANT)
-                                _planet.BuildPowerPlant(i, j);
+                                successful = _planet.BuildPowerPlant(i, j);
                             else if (_selectedToolbarItem == SharedVariables.LUXURY_HOME)
-                                _planet.BuildLuxuryHome(i, j);
+                                successful = _planet.BuildLuxuryHome(i, j);
                             else if (_selectedToolbarItem == SharedVariables.COMFORTABLE_HOME)
-                                _planet.BuildComfortableHome(i, j);
+                                successful = _planet.BuildComfortableHome(i, j);
                             else if (_selectedToolbarItem == SharedVariables.AFFORDABLE_HOME)
-                                _planet.BuildAffordableHome(i, j);
+                                successful = _planet.BuildAffordableHome(i, j);
                             else if (_selectedToolbarItem == SharedVariables.FACTORY)
-                                _planet.BuildFactory(i, j);
+                                successful = _planet.BuildFactory(i, j);
                             else if (_selectedToolbarItem == SharedVariables.ENVIRONMENTAL_FACILITY)
-                                _planet.BuildEnvironmentalFacility(i, j);
+                                successful = _planet.BuildEnvironmentalFacility(i, j);
                             else if (_selectedToolbarItem == SharedVariables.STORE)
-                                _planet.BuildStore(i, j);
+                                successful = _planet.BuildStore(i, j);
                             else if (_selectedToolbarItem == SharedVariables.RESTAURANT)
-                                _planet.BuildRestaurant(i, j);
+                                successful = _planet.BuildRestaurant(i, j);
                             else
-                                _planet.BuildOffice(i, j);
-                            UpdateScoreBoard();
+                                successful = _planet.BuildOffice(i, j);
+                            if (successful)
+                            {
+                                //set the grid image to the one you built
+                                _grid[i, j].Image = _toolbar[_selectedToolbarItem].Image;
+                                UpdateScoreBoard();
+                            }
                         }
                 //reset the mouse cursor to normal
                 this.Cursor = Cursors.Default;

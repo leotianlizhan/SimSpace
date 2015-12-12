@@ -116,5 +116,10 @@ namespace SimSpace_JAT
                 }
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            pnlSizeSelect.Visible = false;
+        }
     }
 }

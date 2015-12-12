@@ -55,6 +55,7 @@
     <Compile Include="Facility.cs" />
     <Compile Include="Factory.cs" />
     <Compile Include="GovernmentFacility.cs" />
+    <Compile Include="IndustrialFacility.cs" />
     <Compile Include="LevelSelectorForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -239,6 +239,55 @@ namespace SimSpace_JAT
             // Returns the Score by using the given formula of multiplying the happy population by 3, adding it onto contentedpopulation and then subtracting pollution from it 
             return 3 * _wrapper.CalculateHappyPopulation() + contentedPopulation - _wrapper.CalculatePollution();
         }
+        // A method used to save the highscore
+        public void SaveHighScore()
+        {
+            //// Handles any errors that may occur
+            //try
+            //{
+            //    // Creates a file named Highscore.txt if the file is not found
+            //    using (StreamWriter file = new StreamWriter("Highscore.txt"))
+            //    {
+            //        // Writes down the highscore of the player
+            //        file.WriteLine(_variables.Score);
+            //    }
+            //}
+            //// Ends try with catch
+            //catch
+            //{
+
+            //}
+        }
+
+        // A method used to load the highscore
+        public void LoadHighScore()
+        {
+            //// Handles any errors that may occur
+            //try
+            //{
+            //    // Checks if the file "Highscore" exists or not
+            //    if (File.Exists("Highscore.txt") == true)
+            //    {
+            //        // If the file exists, read the file using StreamReader
+            //        using (StreamReader file = new StreamReader("Highscore.txt"))
+            //        {
+            //            // Set the text within the file as the Highscore variable
+
+            //        }
+            //    }
+            //    // If the file does not, display a messagebox
+            //    else
+            //    {
+            //        // Have a messagebox that displays "File could not be found" appear
+            //        MessageBox.Show("File could not be found.");
+            //    }
+            //}
+            //// Ends try with catch
+            //catch
+            //{
+
+            //}
+        }
 /*
         // A method used to save the highscore
         public void SaveHighScore(string fileName)

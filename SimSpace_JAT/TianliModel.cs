@@ -85,19 +85,28 @@ namespace SimSpace_JAT
         {
             for (int i = 0; i < _variables.NumRows; i++)
                 for (int j = 0; j < _variables.NumCols; j++)
-                    if ((i - row) * (i - row) + (j - col) * (j - col) <= ResidentialFacility.RANGE_LIMIT * ResidentialFacility.RANGE_LIMIT)
+                    if ((i - row) * (i - row) + (j - col) * (j - col) <= IndustrialFacility.RANGE_LIMIT * IndustrialFacility.RANGE_LIMIT)
                         if (_variables.Facilities[i, j] is Powerplant)
                             return true;
             return false;
         }
 
+        /// <summary>
+        /// Checks where a certain facility can be built on the entire grid
+        /// </summary>
+        /// <param name="selectedFacility">The selected facility's ID</param>
+        /// <returns>2D boolean array indicating where it can be built</returns>
         public bool[,] CanBuildHighlightedGrid(int selectedFacility)
         {
+            //create a 2D array to store results for where a facility can be built, initializes the array with all false
             bool[,] highlightedGrid = new bool[_variables.NumRows, _variables.NumCols];
+            //loop through the array
             for(int i=0; i<_variables.NumRows; i++)
                 for(int j=0; j<_variables.NumCols; j++)
+                    //check if the location currently is dirt
                     if (_variables.Facilities[i, j] is Dirt)
                     {
+                        //check the type of facility you want to build, and check if you can build that facility at that place accordingly
                         if (selectedFacility == SharedVariables.LUXURY_HOME || selectedFacility == SharedVariables.COMFORTABLE_HOME ||
                             selectedFacility == SharedVariables.AFFORDABLE_HOME)
                             highlightedGrid[i, j] = _wrapper.CanBuildResidential(i, j);
@@ -109,6 +118,7 @@ namespace SimSpace_JAT
                         else
                             highlightedGrid[i, j] = true;
                     }
+            //return the result
             return highlightedGrid;
         }
 
@@ -224,6 +234,7 @@ namespace SimSpace_JAT
         /// </summary>
         private void UpdateAllPopulation()
         {
+            //loop throught the array to find residential facility and update them
             for(int i=0; i<_variables.NumRows; i++)
                 for(int j=0; j<_variables.NumCols; j++)
                     if(_variables.Facilities[i, j] is ResidentialFacility)
@@ -235,7 +246,7 @@ namespace SimSpace_JAT
         public void UpdateTime()
         {
             //update the money
-            _variables.Money = CalculateMoney();
+            _variables.Money = _wrapper.CalculateMoney();
             //calculate the score
             _variables.Score = _wrapper.CalculateScore();
             //update the population
