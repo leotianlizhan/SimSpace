@@ -65,21 +65,24 @@ namespace SimSpace_JAT
                 for (int j = 0; j < _variables.NumCols; j++)
                 {
                     // Create an integer variable to store the range limit of a commercial facility, in regards to where it can be built relative to a necessary facility
-                    int rangeLimit = ResidentialFacility.RANGE_LIMIT;
+                    int rangeLimit = CommercialFacility.RANGE_LIMIT;
                     // Create an integer variable to store the square of the hypotenuse
-                    int hypotenuseSquared = (i-row)*(i-col) + (j-row)*(j-col);
+                    int hypotenuseSquared = (i-row)*(i-row) + (j-col)*(j-col);
                     // Create an integer variable tp store the square of the range limit
                     int rangeLimitSquared = rangeLimit * rangeLimit;
-                    // Check to see if the square of the hypotenuse is equal to the square of the range limit, since apparently programming languages don't like comparing decimal values
+                    // Check to see if the square of the hypotenuse is equal to or less than the square of the range limit, since apparently programming languages don't like comparing decimal values
                     if (hypotenuseSquared <= rangeLimitSquared)
                     {
-                        if(_variables.Facilities[i, j] is ResidentialFacility)
-                        // Return true to confirm that the location can have a commercial facility, thereby exiting the function
+                        // If the current cell being checked is in range, check if the cell contains a residential facility
+                        if (_variables.Facilities[i, j] is ResidentialFacility)
+                        {
+                            // Return true to confirm that the location can have a commercial facility (since there is a residential facility in range), thereby exiting the function
                             return true;
+                        }
                     }                    
                 }
             }
-
+            // Return false since no residential facilities were found in range
             return false;            
         }
 
