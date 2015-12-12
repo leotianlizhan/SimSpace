@@ -23,7 +23,7 @@ namespace SimSpace_JAT
         {
             Maintenance = 1000000;
             Revenue = 1500000;
-            Power = 100;
+            Power = -100;
             Pollution = 5000;
             _happyPopulationFactor = 2;
             _maxPopulation = 10000;

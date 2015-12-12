@@ -399,6 +399,10 @@ namespace SimSpace_JAT
             lblMoney.Text = String.Format("Money: {0:C}", _planet.Money);
             lblPopulation.Text = String.Format("Population: {0:n0}", _planet.CalculatePopulation());
             lblPollution.Text = String.Format("Pollution: {0:n0}", _planet.CalculatePollution());
+            if (_planet.CalculatePower() < 0)
+                lblPower.ForeColor = Color.Red;
+            else
+                lblPower.ForeColor = Color.Lime;
             lblPower.Text = String.Format("Power: {0:n0}", _planet.CalculatePower());
             lblScore.Text = String.Format("Score: {0:n0}", _planet.Score);
         }
