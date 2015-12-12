@@ -40,6 +40,7 @@ namespace SimSpace_JAT
             private Image _image;
             //stores the rectangle for the cell for later calculations
             private Rectangle _rect;
+            // Create the image property
             public Image Image
             {
                 get
