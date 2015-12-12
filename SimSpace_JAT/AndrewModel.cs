@@ -91,7 +91,7 @@ namespace SimSpace_JAT
         /// </summary>
         /// <param name="row">The row of the construction site.</param>
         /// <param name="col">The column of the construction site.</param>
-        /// <returns>Returns true if it was successfully built, and false if it could not (if there is already a facility there).</returns>
+        /// <returns>Returns true if it was successfully built, and false if it could not (if there is already a facility there, or if there is not enough money).</returns>
         public bool BuildStore(int row, int col)
         {
             // Check if the construction site (row and col) that is passed in is dirt
@@ -100,17 +100,17 @@ namespace SimSpace_JAT
                 // Check if there is enough money to build the store
                 if (_variables.Money >= Store.COST)
                 {
-                    // Set facility type to store
-                    _variables.Facilities[row, col] = new Store();
                     // Subtract the construction cost of the store from the player's wallet
                     _variables.Money -= Store.COST;
+                    // Set facility type to store
+                    _variables.Facilities[row, col] = new Store();                    
                     // Report to log that a store was successfully built
                     Logger("Successfully constructed a store on top of " + _variables.Facilities[row, col].ToString() + " at (" + row.ToString() + "," + col.ToString() +
-                        "). Store costed $" + Store.COST.ToString() + "; remaining balance: $" + _variables.Money.ToString() + ".", 1);
+                        "). Store costed $" + Store.COST.ToString() + "; remaining balance: $" + _variables.Money.ToString() + ".", 0);
                     // Return true to exit function, since all conditions were met
                     return true;
                 }
-                else // if there is not enough money
+                else // if there is not enough money to build the store
                 {
                     // Report to log that a store was attempted to be built, but there was insufficient money
                     Logger("Prevented a store from being built on top of " + _variables.Facilities[row, col].ToString() + " at (" + row.ToString() + "," + col.ToString() +
@@ -133,16 +133,33 @@ namespace SimSpace_JAT
         /// </summary>
         /// <param name="row">The row of the construction site.</param>
         /// <param name="col">The column of the construction site.</param>
-        /// <returns>Returns true if it was successfully built, and false if it could not (if there is already a facility there).</returns>
+        /// <returns>Returns true if it was successfully built, and false if it could not (if there is already a facility there, or there is not enough money).</returns>
         public bool BuildRestaurant(int row, int col)
         {
-            // Check if the construction site (row and col) that is passed in is dirt, even though another team member's subprogram that calls this already does it (yay, redundancy)
+            // Check if the construction site (row and col) that is passed in is dirt
             if (_variables.Facilities[row, col] is Dirt)
             {
-                // Set facility type to restaurant
-                _variables.Facilities[row, col] = new Restaurant();
-                // Exit the function because the restaurant was built successfully
-                return true;
+                // Check if there is enough money to build the restaurant
+                if (_variables.Money >= Restaurant.COST)
+                {
+                    // Subtract the construction cost of the restaurant from the player's wallet
+                    _variables.Money -= Restaurant.COST;
+                    // Set facility type to restaurant
+                    _variables.Facilities[row, col] = new Restaurant();
+                    // Report to log that a restaurant was successfully built
+                    Logger("Successfully constructed a restaurant on top of " + _variables.Facilities[row, col].ToString() + " at (" + row.ToString() + "," + col.ToString() +
+                        "). Restaurant costed $" + Restaurant.COST.ToString() + "; remaining balance: $" + _variables.Money.ToString() + ".", 0);
+                    // Exit the function because the restaurant was built successfully
+                    return true;
+                }
+                else // if there is not enough money to build the restaurant
+                {
+                    // Report to log that a restaruant was attempted to be built, but there was insufficient money
+                    Logger("Prevented a restaurant from being built on top of " + _variables.Facilities[row, col].ToString() + " at (" + row.ToString() + "," + col.ToString() +
+                        ") due to insufficient money- needed $" + Restaurant.COST.ToString() + ", instead found $" + _variables.Money.ToString() + ".", 1);
+                    // Exit the function because the store was built successfully
+                    return false;
+                }
             }
             else // if the facility type at the row and column given is not dirt
             {
