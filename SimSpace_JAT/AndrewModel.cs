@@ -24,6 +24,9 @@ namespace SimSpace_JAT
         // For example, the file could be named: 2015-12-03_09.49.28.log
         private string _filepath = DateTime.Now.ToString("yyyy-MM-dd") + "_" + DateTime.Now.ToString("hh.mm.ss") + ".log";
 
+        // Create a variable to store if the logger has been run this session
+        private bool _hasLoggingStarted = false;
+
         // Set private constant strings to the various types of debug messages for use as prefixes in the logger
         private const string _PREFIX_INFO = "INFO";
         private const string _PREFIX_WARNING = "WARNING";
@@ -267,18 +270,24 @@ namespace SimSpace_JAT
 
             // Create a new streamwriter object to write the log to
             using (StreamWriter sw = new StreamWriter(_filepath, true))
-            {
-
-                //// Start off the log file with the log file header and disclaimer
-                //sw.WriteLine("|" + DateTime.Now.ToString("hh:mm:ss") + "| [INFO] Logging initialized!");
-                //sw.WriteLine("|" + DateTime.Now.ToString("hh:mm:ss") + "| [INFO] Current date: " + DateTime.Now.ToString("yyyy-MM-dd"));
-                //sw.WriteLine("|" + DateTime.Now.ToString("hh:mm:ss") + "| [INFO] This is the log file for Andrew, Tianli, and Jack's Assignment 2 for ICS4U 2015 Semester 1.");
-                //sw.WriteLine("|" + DateTime.Now.ToString("hh:mm:ss") + "| [INFO] Since nobody except for Andrew sees the importance logging debug information is, Andrew will likely be the only person to ever need to open one of these.");
-                //sw.WriteLine("|" + DateTime.Now.ToString("hh:mm:ss") + "| [INFO] Blame everyone else if something breaks and you can't find it in these log files :D");
-
-                // Write the log message to the log file with the proper time formatting
-                sw.WriteLine("|{0}| [{1}] {2}", DateTime.Now.ToString("hh:mm:ss"), _debugType, line);
-
+            {                
+                // Check if the logger was called before
+                if (_hasLoggingStarted == true) // if logging has already been called before
+                {
+                    // Write the log message to the log file with the proper time formatting
+                    sw.WriteLine("|{0}| [{1}] {2}", DateTime.Now.ToString("hh:mm:ss"), _debugType, line);
+                }
+                else // if this is the first time logger is called
+                {
+                    // Start off the log file with the log file header and disclaimer
+                    sw.WriteLine("|" + DateTime.Now.ToString("hh:mm:ss") + "| [" + _PREFIX_INFO + "] Logging initialized!");
+                    sw.WriteLine("|" + DateTime.Now.ToString("hh:mm:ss") + "| [" + _PREFIX_INFO + "] Current date: " + DateTime.Now.ToString("yyyy-MM-dd"));
+                    sw.WriteLine("|" + DateTime.Now.ToString("hh:mm:ss") + "| [" + _PREFIX_INFO + "] This is an automatically generated log file for Andrew, Tianli, and Jack's Assignment 2 for ICS4U 2015 Semester 1.");
+                    // After writing the log file header, write the input log message to the log file with the proper time formatting
+                    sw.WriteLine("|{0}| [{1}] {2}", DateTime.Now.ToString("hh:mm:ss"), _debugType, line);
+                    // Set the status of the logging to true, to avoid printing the header again
+                    _hasLoggingStarted = true;
+                }
             }
         }
 
