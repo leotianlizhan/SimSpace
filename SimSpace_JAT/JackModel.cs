@@ -106,6 +106,7 @@ namespace SimSpace_JAT
                     // Exits the function because it was built
                     return true;
                 }
+            }
 
                 // Checks if the type of the building is a School
                 else if (type == BUILD_SCHOOL)
@@ -139,7 +140,6 @@ namespace SimSpace_JAT
                         // Exits the function because it was built 
                         return true;
                     }
-
                 }
 
                 // Checks if the type of the building is a Government Facility
@@ -205,11 +205,10 @@ namespace SimSpace_JAT
                         // Exits the function because it was built
                         return true;
                     }
-                }               
-            }
+                }
             // Exits the function because nothing could be built
-            return false;
-        }
+            return false;   
+            }
 
         // Calculates the total pollution of the planet
         public int CalculatePollution()
