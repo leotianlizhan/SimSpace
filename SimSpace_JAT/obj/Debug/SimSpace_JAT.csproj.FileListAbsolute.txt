@@ -18,3 +18,6 @@ E:\CS12\SimSpace_JAT\SimSpace_JAT\obj\Debug\SimSpace_JAT.LevelSelectorForm.resou
 E:\CS12\SimSpace_JAT\SimSpace_JAT\obj\Debug\SimSpace_JAT.PlanetTianliForm.resources
 E:\CS12\SimSpace_JAT\SimSpace_JAT\obj\Debug\SimSpace_JAT.Properties.Resources.resources
 E:\CS12\SimSpace_JAT\SimSpace_JAT\obj\Debug\SimSpace_JAT.csproj.GenerateResource.Cache
+F:\Compsci Temp\SimSpace_Git\SimSpace\SimSpace_JAT\bin\Debug\SimSpace_JAT.exe.config
+F:\Compsci Temp\SimSpace_Git\SimSpace\SimSpace_JAT\obj\Debug\SimSpace_JAT.exe
+F:\Compsci Temp\SimSpace_Git\SimSpace\SimSpace_JAT\obj\Debug\SimSpace_JAT.pdb

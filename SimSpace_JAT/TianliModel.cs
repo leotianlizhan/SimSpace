@@ -1,4 +1,4 @@
-﻿// Tianli Zhan
+﻿// Tianli Zhan || Group members: Andrew, Jack
 // December 2, 2015
 // My model that contains my share of the subprograms for this program
 using System;
