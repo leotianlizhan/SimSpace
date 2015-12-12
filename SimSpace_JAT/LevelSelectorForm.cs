@@ -22,7 +22,7 @@ namespace SimSpace_JAT
             InitializeComponent();
         }
 
-        //show the 
+        //show the map size selection panel
         private void btnStart_Click(object sender, EventArgs e)
         {
             pnlSizeSelect.Visible = true;
