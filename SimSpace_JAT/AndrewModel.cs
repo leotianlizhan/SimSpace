@@ -94,13 +94,30 @@ namespace SimSpace_JAT
         /// <returns>Returns true if it was successfully built, and false if it could not (if there is already a facility there).</returns>
         public bool BuildStore(int row, int col)
         {
-            // Check if the construction site (row and col) that is passed in is dirt, even though another team member's subprogram that calls this already does it (yay, redundancy)
+            // Check if the construction site (row and col) that is passed in is dirt
             if (_variables.Facilities[row, col] is Dirt)
             {
-                // Set facility type to store
-                _variables.Facilities[row, col] = new Store();
-                // Exit the function because the store was built successfully
-                return true;
+                // Check if there is enough money to build the store
+                if (_variables.Money >= Store.COST)
+                {
+                    // Set facility type to store
+                    _variables.Facilities[row, col] = new Store();
+                    // Subtract the construction cost of the store from the player's wallet
+                    _variables.Money -= Store.COST;
+                    // Report to log that a store was successfully built
+                    Logger("Successfully constructed a store on top of " + _variables.Facilities[row, col].ToString() + " at (" + row.ToString() + "," + col.ToString() +
+                        "). Store costed $" + Store.COST.ToString() + "; remaining balance: $" + _variables.Money.ToString() + ".", 1);
+                    // Return true to exit function, since all conditions were met
+                    return true;
+                }
+                else // if there is not enough money
+                {
+                    // Report to log that a store was attempted to be built, but there was insufficient money
+                    Logger("Prevented a store from being built on top of " + _variables.Facilities[row, col].ToString() + " at (" + row.ToString() + "," + col.ToString() +
+                        ") due to insufficient money- needed $" + Store.COST.ToString() + ", instead found $" + _variables.Money.ToString() + ".", 1);
+                    // Exit the function because the store was built successfully
+                    return false;
+                }
             }
             else // if the facility type at the row and column given is not dirt
             {
