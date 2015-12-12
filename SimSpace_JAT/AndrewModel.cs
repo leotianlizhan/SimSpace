@@ -181,10 +181,27 @@ namespace SimSpace_JAT
             // Check if the construction site (row and col) that is passed in is dirt, even though another team member's subprogram that calls this already does it (yay, redundancy)
             if (_variables.Facilities[row, col] is Dirt)
             {
-                // Set facility type to office
-                _variables.Facilities[row, col] = new Office();
-                // Exit the function because the office was built successfully
-                return true;
+                // Check if there is enough money to build the office
+                if (_variables.Money >= Office.COST)
+                {
+                    // Subtract the construction cost of the office from the player's wallet
+                    _variables.Money -= Office.COST;
+                    // Set facility type to office
+                    _variables.Facilities[row, col] = new Office();
+                    // Report to log that an office was successfully built
+                    Logger("Successfully constructed an office on top of " + _variables.Facilities[row, col].ToString() + " at (" + row.ToString() + "," + col.ToString() +
+                        "). Office costed $" + Store.COST.ToString() + "; remaining balance: $" + _variables.Money.ToString() + ".", 0);
+                    // Exit the function because the office was built successfully
+                    return true;
+                }
+                else // if there is not enough money to build the office
+                {
+                    // Report to log that a office was attempted to be built, but there was insufficient money
+                    Logger("Prevented an office from being built on top of " + _variables.Facilities[row, col].ToString() + " at (" + row.ToString() + "," + col.ToString() +
+                        ") due to insufficient money- needed $" + Office.COST.ToString() + ", instead found $" + _variables.Money.ToString() + ".", 1);
+                    // Exit the function because the office was built successfully
+                    return false;
+                }
             }
             else // if the facility type at the row and column given is not dirt
             {
