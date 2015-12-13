@@ -20,6 +20,13 @@ namespace SimSpace_JAT
         public LevelSelectorForm()
         {
             InitializeComponent();
+            btnStart.BackColor = Color.FromArgb(160, Color.SkyBlue);
+            btnLoad.BackColor = Color.FromArgb(160, Color.SkyBlue);
+            btnStartLarge.BackColor = Color.FromArgb(160, Color.SkyBlue);
+            btnStartMedium.BackColor = Color.FromArgb(160, Color.SkyBlue);
+            btnStartSmall.BackColor = Color.FromArgb(160, Color.SkyBlue);
+            btnBack.BackColor = Color.FromArgb(160, Color.SkyBlue);
+            btnCredits.BackColor = Color.FromArgb(160, Color.SkyBlue);
         }
 
         //show the map size selection panel
@@ -121,5 +128,48 @@ namespace SimSpace_JAT
         {
             pnlSizeSelect.Visible = false;
         }
+
+        //beautifying buttons
+        private void btnStart_MouseLeave(object sender, EventArgs e)
+        {
+            btnStart.ForeColor = Color.White;
+        }
+        private void btnStart_MouseEnter(object sender, EventArgs e)
+        {
+            btnStart.ForeColor = Color.Black;
+        }
+        private void btnLoad_MouseEnter(object sender, EventArgs e)
+        {
+            btnLoad.ForeColor = Color.Black;
+        }
+        private void btnLoad_MouseLeave(object sender, EventArgs e)
+        {
+            btnLoad.ForeColor = Color.White;
+        }
+        private void btnCredits_MouseEnter(object sender, EventArgs e)
+        {
+            btnCredits.ForeColor = Color.Black;
+        }
+        private void btnCredits_MouseLeave(object sender, EventArgs e)
+        {
+            btnCredits.ForeColor = Color.White;
+        }
+        private void btnStartSmall_MouseEnter(object sender, EventArgs e)
+        {
+            btnStartSmall.ForeColor = Color.Black;
+        }
+        private void btnStartSmall_MouseLeave(object sender, EventArgs e)
+        {
+            btnStartSmall.ForeColor = Color.White;
+        }
+        private void btnStartMedium_MouseEnter(object sender, EventArgs e)
+        {
+            btnStartMedium.ForeColor = Color.Black;
+        }
+        private void btnStartMedium_MouseLeave(object sender, EventArgs e)
+        {
+            btnStartMedium.ForeColor = Color.White;
+        }
+
     }
 }
