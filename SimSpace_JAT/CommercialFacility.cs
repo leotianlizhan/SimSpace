@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Written by Andrew Pang || Group members: Tianli Zhan, Jack Wen 
+// ICS4U December 2, 2015
+// This is the parent class for the commercial facilities, which inherits from the main facility class
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
