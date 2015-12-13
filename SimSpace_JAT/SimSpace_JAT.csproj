@@ -151,9 +151,6 @@
     <None Include="Resources\Office.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Factory.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Affordable_Home_Cursor.ico" />
   </ItemGroup>
   <ItemGroup>

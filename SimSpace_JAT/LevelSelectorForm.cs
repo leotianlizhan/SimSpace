@@ -20,6 +20,7 @@ namespace SimSpace_JAT
         public LevelSelectorForm()
         {
             InitializeComponent();
+            //beautify the buttons to have a cool color
             btnStart.BackColor = Color.FromArgb(160, Color.SkyBlue);
             btnLoad.BackColor = Color.FromArgb(160, Color.SkyBlue);
             btnStartLarge.BackColor = Color.FromArgb(160, Color.SkyBlue);

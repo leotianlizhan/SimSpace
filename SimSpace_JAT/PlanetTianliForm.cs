@@ -128,10 +128,14 @@ namespace SimSpace_JAT
             int xLocation = _toolbarCellSize.Width + _gridCellSize.Width * GRID_SIZE + _toolbarCellSize.Width * 3 * 2 / 5;
             //change the side options' locations
             pnlScoreBoard.Location = new Point(xLocation, 5);
-            btnSave.Location = new Point(xLocation, pnlScoreBoard.Location.Y + pnlScoreBoard.Size.Height + _toolbarCellSize.Width * 2 / 5);
+            btnSave.Location = new Point(xLocation + pnlScoreBoard.Width/2-btnSave.Width/2, pnlScoreBoard.Location.Y + pnlScoreBoard.Size.Height + _toolbarCellSize.Width * 2 / 5);
             //make them visible
             pnlScoreBoard.Visible = true;
             btnSave.Visible = true;
+            //change the scoreboard's color
+            pnlScoreBoard.BackColor = Color.FromArgb(160, Color.SkyBlue);
+            //change the save button's color
+            btnSave.BackColor = Color.FromArgb(160, Color.SkyBlue);
         }
 
         //Tianli
@@ -234,26 +238,26 @@ namespace SimSpace_JAT
                     // Loop through each column in the grid
                     for (int j = 0; j < _grid.GetLength(SharedVariables.COL); j++)
                     {
-                        //Check if there is no image (means it's Dirt) to prevent crashing
-                        if (_grid[i, j].Image != null)
-                        {
-                            e.Graphics.DrawImage(_grid[i, j].Image, _grid[i, j].Rect);
-                        }
                         //check if the grid needs to be highlighted
                         if (_highlightedGrid != null)
                         {
                             //if this cell is true, highlight it with translucent green
                             if (_highlightedGrid[i, j])
-                                e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(50, Color.Green)), _grid[i, j].Rect);
+                                e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(50, Color.Lime)), _grid[i, j].Rect);
                             //otherwise highlight it with translucent red
                             else
-                                e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(50, Color.Crimson)), _grid[i, j].Rect);
+                                e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(50, Color.IndianRed)), _grid[i, j].Rect);
                         }
                         //do not highlight it otherwise, and clear all colors
                         else
-                            e.Graphics.FillRectangle(new SolidBrush(Color.Transparent), _grid[i, j].Rect);
+                            e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(80, Color.SkyBlue)), _grid[i, j].Rect);
+                        //Check if there is no image (means it's Dirt) to prevent crashing
+                        if (_grid[i, j].Image != null)
+                        {
+                            e.Graphics.DrawImage(_grid[i, j].Image, _grid[i, j].Rect);
+                        }
                         //draw the cell borders at last
-                        e.Graphics.DrawRectangle(Pens.Black, _grid[i, j].Rect);
+                        e.Graphics.DrawRectangle(Pens.SteelBlue, _grid[i, j].Rect);
                     }
                 }
             }
@@ -275,7 +279,7 @@ namespace SimSpace_JAT
                         //Draws the image
                         e.Graphics.DrawImage(_toolbar[i].Image, _toolbar[i].Rect);
                         //Draws the cell
-                        e.Graphics.DrawRectangle(Pens.Black, _toolbar[i].Rect);
+                        e.Graphics.DrawRectangle(Pens.DeepSkyBlue, _toolbar[i].Rect);
                     }
                 }
             }
@@ -417,6 +421,16 @@ namespace SimSpace_JAT
             lblPower.Text = String.Format("Power: {0:n0}", _planet.CalculatePower());
             lblScore.Text = String.Format("Score: {0:n0}", _planet.Score);
             lblTime.Text = String.Format("Months Passed: {0:n0}", _planet.TimeElapsed);
+        }
+
+        //beautify the button, change text color
+        private void btnSave_MouseEnter(object sender, EventArgs e)
+        {
+            btnSave.ForeColor = Color.Black;
+        }
+        private void btnSave_MouseLeave(object sender, EventArgs e)
+        {
+            btnSave.ForeColor = Color.White;
         }
     }
 }
