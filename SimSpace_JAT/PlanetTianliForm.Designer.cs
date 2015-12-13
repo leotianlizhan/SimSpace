@@ -32,12 +32,13 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.tmrTimer = new System.Windows.Forms.Timer(this.components);
             this.pnlScoreBoard = new System.Windows.Forms.Panel();
+            this.lblTime = new System.Windows.Forms.Label();
             this.lblPopulation = new System.Windows.Forms.Label();
             this.lblPollution = new System.Windows.Forms.Label();
             this.lblPower = new System.Windows.Forms.Label();
             this.lblMoney = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
-            this.lblTime = new System.Windows.Forms.Label();
+            this.lblCurrentDate = new System.Windows.Forms.Label();
             this.pnlScoreBoard.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +61,7 @@
             // pnlScoreBoard
             // 
             this.pnlScoreBoard.BackColor = System.Drawing.Color.Black;
+            this.pnlScoreBoard.Controls.Add(this.lblCurrentDate);
             this.pnlScoreBoard.Controls.Add(this.lblTime);
             this.pnlScoreBoard.Controls.Add(this.lblPopulation);
             this.pnlScoreBoard.Controls.Add(this.lblPollution);
@@ -68,9 +70,19 @@
             this.pnlScoreBoard.Controls.Add(this.lblScore);
             this.pnlScoreBoard.Location = new System.Drawing.Point(41, 41);
             this.pnlScoreBoard.Name = "pnlScoreBoard";
-            this.pnlScoreBoard.Size = new System.Drawing.Size(302, 206);
+            this.pnlScoreBoard.Size = new System.Drawing.Size(302, 223);
             this.pnlScoreBoard.TabIndex = 1;
             this.pnlScoreBoard.Visible = false;
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.ForeColor = System.Drawing.Color.White;
+            this.lblTime.Location = new System.Drawing.Point(16, 169);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(86, 13);
+            this.lblTime.TabIndex = 5;
+            this.lblTime.Text = "Months Passed: ";
             // 
             // lblPopulation
             // 
@@ -123,21 +135,21 @@
             this.lblScore.TabIndex = 0;
             this.lblScore.Text = "Score";
             // 
-            // lblTime
+            // lblCurrentDate
             // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(17, 171);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(86, 13);
-            this.lblTime.TabIndex = 5;
-            this.lblTime.Text = "Months Passed: ";
+            this.lblCurrentDate.AutoSize = true;
+            this.lblCurrentDate.ForeColor = System.Drawing.Color.White;
+            this.lblCurrentDate.Location = new System.Drawing.Point(16, 193);
+            this.lblCurrentDate.Name = "lblCurrentDate";
+            this.lblCurrentDate.Size = new System.Drawing.Size(73, 13);
+            this.lblCurrentDate.TabIndex = 6;
+            this.lblCurrentDate.Text = "Current Date: ";
             // 
             // PlanetTianliForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 305);
+            this.ClientSize = new System.Drawing.Size(484, 508);
             this.Controls.Add(this.pnlScoreBoard);
             this.Controls.Add(this.btnSave);
             this.DoubleBuffered = true;
@@ -162,6 +174,7 @@
         private System.Windows.Forms.Label lblMoney;
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Label lblCurrentDate;
 
     }
 }
