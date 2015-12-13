@@ -17,6 +17,45 @@ namespace SimSpace_JAT
 {
     public partial class LevelSelectorForm : Form
     {
+        private struct Star
+        {
+            private Point _location;
+            private Point _velocity;
+            private int _size;
+            public Point Location
+            {
+                get
+                {
+                    return _location;
+                }
+                set
+                {
+                    _location = value;
+                }
+            }
+            public Point Velocity
+            {
+                get
+                {
+                    return _velocity;
+                }
+                set
+                {
+                    _velocity = value;
+                }
+            }
+            public int Size
+            {
+                get
+                {
+                    return _size;
+                }
+                set
+                {
+                    _location = _size;
+                }
+            }
+        }
         public LevelSelectorForm()
         {
             InitializeComponent();
@@ -187,5 +226,42 @@ namespace SimSpace_JAT
         {
             btnBack.ForeColor = Color.White;
         }
+
+        private void StarMotionMain()
+        {
+            int lastTime = Environment.TickCount;
+            int curTime;
+            int timeElapsed = 0;
+            while (true)
+            {
+                curTime = Environment.TickCount;
+                timeElapsed = curTime - lastTime;
+                if (timeElapsed >= 20)
+                {
+                    UpdateStars();
+                    Refresh();
+                    lastTime = curTime;
+                }
+            }
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+
+            RenderStars(e);
+        }
+
+        private void UpdateStars()
+        {
+            
+        }
+
+        private void RenderStars(PaintEventArgs e)
+        {
+
+        }
+
+
     }
 }
