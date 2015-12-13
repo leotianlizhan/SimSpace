@@ -387,7 +387,7 @@ namespace SimSpace_JAT
             //if saved successfully
             if (_planet.Save())
                 MessageBox.Show("Saved Successfully", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else
+            else // if file could not be saved properly
                 MessageBox.Show("ERROR. Maybe you have the file open, close them all if you can", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
