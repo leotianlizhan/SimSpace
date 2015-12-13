@@ -106,6 +106,8 @@
             this.btnBack.Text = "PREVIOUS MENU";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnBack.MouseEnter += new System.EventHandler(this.btnBack_MouseEnter);
+            this.btnBack.MouseLeave += new System.EventHandler(this.btnBack_MouseLeave);
             // 
             // btnStartLarge
             // 
@@ -121,6 +123,8 @@
             this.btnStartLarge.Text = "LARGE (30x30)";
             this.btnStartLarge.UseVisualStyleBackColor = false;
             this.btnStartLarge.Click += new System.EventHandler(this.btnStartLarge_Click);
+            this.btnStartLarge.MouseEnter += new System.EventHandler(this.btnStartLarge_MouseEnter);
+            this.btnStartLarge.MouseLeave += new System.EventHandler(this.btnStartLarge_MouseLeave);
             // 
             // btnStartMedium
             // 

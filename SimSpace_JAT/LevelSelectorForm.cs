@@ -170,6 +170,21 @@ namespace SimSpace_JAT
         {
             btnStartMedium.ForeColor = Color.White;
         }
-
+        private void btnStartLarge_MouseEnter(object sender, EventArgs e)
+        {
+            btnStartLarge.ForeColor = Color.Black;
+        }
+        private void btnStartLarge_MouseLeave(object sender, EventArgs e)
+        {
+            btnStartLarge.ForeColor = Color.White;
+        }
+        private void btnBack_MouseEnter(object sender, EventArgs e)
+        {
+            btnBack.ForeColor = Color.Black;
+        }
+        private void btnBack_MouseLeave(object sender, EventArgs e)
+        {
+            btnBack.ForeColor = Color.White;
+        }
     }
 }
