@@ -134,6 +134,7 @@ namespace SimSpace_JAT
             btnSave.Visible = true;
         }
 
+        //Tianli
         /// <summary>
         /// Creates the grid
         /// </summary>
@@ -181,6 +182,7 @@ namespace SimSpace_JAT
             Refresh();
         }
 
+        //Tianli
         /// <summary>
         /// Initializes the toolbar with rectangle locations and images
         /// </summary>
@@ -208,6 +210,7 @@ namespace SimSpace_JAT
             _toolbar[SharedVariables.OFFICE].Image = Properties.Resources.Office;
         }
 
+        //Tianli
         //override OnPaint, called everytime the form refreshes
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -218,6 +221,7 @@ namespace SimSpace_JAT
             DrawToolbar(e);
         }
 
+        //Tianli
         //Draws the grid
         private void DrawGrid(PaintEventArgs e)
         {
@@ -255,6 +259,7 @@ namespace SimSpace_JAT
             }
         }
 
+        //Tianli
         //Draws the toolbar
         private void DrawToolbar(PaintEventArgs e)
         {
@@ -276,6 +281,7 @@ namespace SimSpace_JAT
             }
         }
 
+        //Tianli
         private void PlanetTianliForm_MouseDown(object sender, MouseEventArgs e)
         {
             //loop through the toolbar
@@ -318,6 +324,7 @@ namespace SimSpace_JAT
                 }
         }
 
+        //Tianli
         private void PlanetTianliForm_MouseUp(object sender, MouseEventArgs e)
         {
             //if something is selected
@@ -374,6 +381,7 @@ namespace SimSpace_JAT
             }
         }
 
+        //Tianli
         private void btnSave_Click(object sender, EventArgs e)
         {
             //if saved successfully
@@ -383,6 +391,7 @@ namespace SimSpace_JAT
                 MessageBox.Show("ERROR. Maybe you have the file open, close them all if you can", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
+        //Tianli, Andrew
         private void tmrTimer_Tick(object sender, EventArgs e)
         {
             //update the data every month
@@ -391,6 +400,7 @@ namespace SimSpace_JAT
             UpdateScoreBoard();
         }
 
+        //Tianli
         /// <summary>
         /// Updates the scoreboard data on the side
         /// </summary>

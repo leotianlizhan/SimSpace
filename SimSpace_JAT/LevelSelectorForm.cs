@@ -90,7 +90,7 @@ namespace SimSpace_JAT
                                 }
                                 //else if (size == PlanetAndrewForm.GRID_SIZE)
                                 //{
-                                //    PlanetTianliForm form = new PlanetAndrewForm(openFileDialog.FileName);
+                                //    PlanetAndrewForm form = new PlanetAndrewForm(openFileDialog.FileName);
                                 //    form.Show();
                                 //    return;
                                 //}
