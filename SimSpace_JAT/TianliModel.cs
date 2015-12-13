@@ -249,6 +249,8 @@ namespace SimSpace_JAT
             _variables.Money = _wrapper.CalculateMoney();
             //calculate the score
             _variables.Score = _wrapper.CalculateScore();
+            //update the time elapsed in months
+            _variables.TimeElapsed++;
             //update the population
             UpdateAllPopulation();
         }
@@ -269,6 +271,9 @@ namespace SimSpace_JAT
                     //save the size of the map
                     sr.WriteLine("[SIZE]");
                     sr.WriteLine(_variables.NumRows);
+                    //save the time elapsed in months (game time)
+                    sr.WriteLine("[TIME]");
+                    sr.WriteLine(_variables.TimeElapsed);
                     //save the score
                     sr.WriteLine("[SCORE]");
                     sr.WriteLine(_variables.Score);

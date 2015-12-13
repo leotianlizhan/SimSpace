@@ -28,3 +28,13 @@ F:\Compsci Temp\SimSpace_Git\SimSpace\SimSpace_JAT\obj\Debug\SimSpace_JAT.LevelS
 F:\Compsci Temp\SimSpace_Git\SimSpace\SimSpace_JAT\obj\Debug\SimSpace_JAT.PlanetTianliForm.resources
 F:\Compsci Temp\SimSpace_Git\SimSpace\SimSpace_JAT\obj\Debug\SimSpace_JAT.Properties.Resources.resources
 F:\Compsci Temp\SimSpace_Git\SimSpace\SimSpace_JAT\obj\Debug\SimSpace_JAT.csproj.GenerateResource.Cache
+F:\CS12\SimSpace\SimSpace_JAT\bin\Debug\SimSpace_JAT.exe.config
+F:\CS12\SimSpace\SimSpace_JAT\obj\Debug\SimSpace_JAT.exe
+F:\CS12\SimSpace\SimSpace_JAT\obj\Debug\SimSpace_JAT.pdb
+F:\CS12\SimSpace\SimSpace_JAT\bin\Debug\SimSpace_JAT.exe
+F:\CS12\SimSpace\SimSpace_JAT\bin\Debug\SimSpace_JAT.pdb
+F:\CS12\SimSpace\SimSpace_JAT\obj\Debug\SimSpace_JAT.csprojResolveAssemblyReference.cache
+F:\CS12\SimSpace\SimSpace_JAT\obj\Debug\SimSpace_JAT.LevelSelectorForm.resources
+F:\CS12\SimSpace\SimSpace_JAT\obj\Debug\SimSpace_JAT.PlanetTianliForm.resources
+F:\CS12\SimSpace\SimSpace_JAT\obj\Debug\SimSpace_JAT.Properties.Resources.resources
+F:\CS12\SimSpace\SimSpace_JAT\obj\Debug\SimSpace_JAT.csproj.GenerateResource.Cache

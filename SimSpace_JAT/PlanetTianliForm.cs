@@ -406,6 +406,7 @@ namespace SimSpace_JAT
                 lblPower.ForeColor = Color.Lime;
             lblPower.Text = String.Format("Power: {0:n0}", _planet.CalculatePower());
             lblScore.Text = String.Format("Score: {0:n0}", _planet.Score);
+            lblTime.Text = String.Format("Months Passed: {0:n0}", _planet.TimeElapsed);
         }
     }
 }

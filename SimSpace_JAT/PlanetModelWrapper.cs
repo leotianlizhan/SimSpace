@@ -33,8 +33,6 @@ namespace SimSpace_JAT
                 for (int j = 0; j < numCols; j++)
                     _variables.Facilities[i, j] = new Dirt();
 
-            Money = SharedVariables.START_MONEY;
-
             _andrewModel = new AndrewModel(this, _variables);
             _tianliModel = new TianliModel(this, _variables);
             _jackModel = new JackModel(this, _variables);
@@ -267,6 +265,17 @@ namespace SimSpace_JAT
             private set
             {
                 _variables.Score = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets the time elapsed in months
+        /// </summary>
+        public int TimeElapsed
+        {
+            get
+            {
+                return _variables.TimeElapsed;
             }
         }
     }

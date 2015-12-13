@@ -70,13 +70,13 @@ namespace SimSpace_JAT
         // ||*************************||
 
         // Create a private long variable to store the money
-        private long _money;
+        private long _money = START_MONEY;
         // Create a private integer variable to store the score
         private int _score;
         // Create a private integer variable to store the highscore
         private int _highscore;
         // Create a private integer variable to store the elapsed time
-        private int _timeElapsed;
+        private int _timeElapsed = 0;
 
         // The private 2D array of facilities
         private Facility[,] _facilities;
