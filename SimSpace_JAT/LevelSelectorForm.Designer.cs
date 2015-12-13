@@ -45,7 +45,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.BackColor = System.Drawing.SystemColors.Control;
+            this.btnStart.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnStart.FlatAppearance.BorderSize = 0;
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStart.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -62,7 +62,7 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLoad.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnLoad.FlatAppearance.BorderSize = 0;
             this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoad.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -81,6 +81,7 @@
             // pnlSizeSelect
             // 
             this.pnlSizeSelect.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlSizeSelect.BackColor = System.Drawing.Color.Transparent;
             this.pnlSizeSelect.Controls.Add(this.btnBack);
             this.pnlSizeSelect.Controls.Add(this.btnStartLarge);
             this.pnlSizeSelect.Controls.Add(this.btnStartMedium);
@@ -93,7 +94,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBack.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -111,7 +112,7 @@
             // 
             // btnStartLarge
             // 
-            this.btnStartLarge.BackColor = System.Drawing.SystemColors.Control;
+            this.btnStartLarge.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnStartLarge.FlatAppearance.BorderSize = 0;
             this.btnStartLarge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStartLarge.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -128,7 +129,7 @@
             // 
             // btnStartMedium
             // 
-            this.btnStartMedium.BackColor = System.Drawing.SystemColors.Control;
+            this.btnStartMedium.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnStartMedium.FlatAppearance.BorderSize = 0;
             this.btnStartMedium.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStartMedium.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -145,7 +146,7 @@
             // 
             // btnStartSmall
             // 
-            this.btnStartSmall.BackColor = System.Drawing.SystemColors.Control;
+            this.btnStartSmall.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnStartSmall.FlatAppearance.BorderSize = 0;
             this.btnStartSmall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStartSmall.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -163,6 +164,7 @@
             // pnlLevelSelector
             // 
             this.pnlLevelSelector.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlLevelSelector.BackColor = System.Drawing.Color.Transparent;
             this.pnlLevelSelector.Controls.Add(this.btnCredits);
             this.pnlLevelSelector.Controls.Add(this.btnStart);
             this.pnlLevelSelector.Controls.Add(this.btnLoad);
@@ -173,7 +175,7 @@
             // 
             // btnCredits
             // 
-            this.btnCredits.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCredits.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnCredits.FlatAppearance.BorderSize = 0;
             this.btnCredits.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCredits.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -204,6 +206,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = global::SimSpace_JAT.Properties.Resources.Deep_Space_Wallpaper;
             this.ClientSize = new System.Drawing.Size(344, 501);
             this.Controls.Add(this.pnlSizeSelect);
             this.Controls.Add(this.picLogoText);

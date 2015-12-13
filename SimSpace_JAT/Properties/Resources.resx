@@ -208,4 +208,7 @@
   <data name="simspacejat_logoplusbluetextcomplete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\simspacejat_logoplusbluetextcomplete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Deep_Space_Wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Deep_Space_Wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
