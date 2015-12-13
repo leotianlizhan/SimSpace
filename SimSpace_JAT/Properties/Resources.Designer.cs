@@ -323,6 +323,16 @@ namespace SimSpace_JAT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap simspacejat_logoplusbluetextcomplete {
+            get {
+                object obj = ResourceManager.GetObject("simspacejat_logoplusbluetextcomplete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap simspacejat_logoplustext {
             get {
                 object obj = ResourceManager.GetObject("simspacejat_logoplustext", resourceCulture);

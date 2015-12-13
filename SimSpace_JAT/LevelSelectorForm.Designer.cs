@@ -106,6 +106,8 @@
             this.btnBack.Text = "PREVIOUS MENU";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnBack.MouseEnter += new System.EventHandler(this.btnBack_MouseEnter);
+            this.btnBack.MouseLeave += new System.EventHandler(this.btnBack_MouseLeave);
             // 
             // btnStartLarge
             // 
@@ -121,6 +123,8 @@
             this.btnStartLarge.Text = "LARGE (30x30)";
             this.btnStartLarge.UseVisualStyleBackColor = false;
             this.btnStartLarge.Click += new System.EventHandler(this.btnStartLarge_Click);
+            this.btnStartLarge.MouseEnter += new System.EventHandler(this.btnStartLarge_MouseEnter);
+            this.btnStartLarge.MouseLeave += new System.EventHandler(this.btnStartLarge_MouseLeave);
             // 
             // btnStartMedium
             // 
@@ -187,10 +191,10 @@
             // 
             this.picLogoText.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picLogoText.BackColor = System.Drawing.Color.Transparent;
-            this.picLogoText.Image = global::SimSpace_JAT.Properties.Resources.simspacejat_logoplusbluetext;
-            this.picLogoText.Location = new System.Drawing.Point(37, 34);
+            this.picLogoText.Image = global::SimSpace_JAT.Properties.Resources.simspacejat_logoplusbluetextcomplete;
+            this.picLogoText.Location = new System.Drawing.Point(43, 12);
             this.picLogoText.Name = "picLogoText";
-            this.picLogoText.Size = new System.Drawing.Size(280, 200);
+            this.picLogoText.Size = new System.Drawing.Size(267, 231);
             this.picLogoText.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogoText.TabIndex = 4;
             this.picLogoText.TabStop = false;
