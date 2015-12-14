@@ -15,7 +15,7 @@ namespace SimSpace_JAT
     class JackModel
     {
         // Link to the other programmer's methods 
-        PlanetModelWrapper _wrapper; 
+        PlanetModelWrapper _wrapper;
 
         // Links to the variables all programmer's share within sharedvariables
         SharedVariables _variables;
@@ -37,7 +37,11 @@ namespace SimSpace_JAT
         // Constant strings used in order to build the "industrial facility" lands
         private const string BUILD_FACTORY = "Factory";
         private const string BUILD_ENVIRONMENTALFACILITY = "Environmental Facility";
-        
+
+        // Sets highscore as an int variable 
+        int highestScore;
+        int preHighscore;
+
         // A boolean used to build the Emergency Services using the rows and columns of the grid
         public bool BuildEmergencyServices(int row, int col)
         {
@@ -109,111 +113,111 @@ namespace SimSpace_JAT
             }
 
                 // Checks if the type of the building is a School
-                else if (type == BUILD_SCHOOL)
+            else if (type == BUILD_SCHOOL)
+            {
+                // Checks if the user's money is greater than the cost of a School
+                if (_variables.Money >= School.COST)
                 {
-                    // Checks if the user's money is greater than the cost of a School
-                    if (_variables.Money >= School.COST)
-                    {
-                        // Find the difference between the user's current amount of money and the cost of the school
-                        _variables.Money -= School.COST;
+                    // Find the difference between the user's current amount of money and the cost of the school
+                    _variables.Money -= School.COST;
 
-                        // Build a school at the desired grid space
-                        _variables.Facilities[row, col] = new School();
+                    // Build a school at the desired grid space
+                    _variables.Facilities[row, col] = new School();
 
-                        // Exits the function because it was built
-                        return true;
-                    }
+                    // Exits the function because it was built
+                    return true;
                 }
-
-                // Checks if the type of the building is a Medical Facility
-                else if (type == BUILD_MEDICALFACILITY)
-                {
-                    // Checks if the user's money is greater than the cost of a Medical Facility
-                    if (_variables.Money >= MedicalFacility.COST)
-                    {
-                        // Find the difference between the user's current amount of money and the cost of the Medical Facility
-                        _variables.Money -= MedicalFacility.COST;
-
-                        // Build a Medical Facility at the desired grid space
-                        _variables.Facilities[row, col] = new MedicalFacility();
-
-                        // Exits the function because it was built 
-                        return true;
-                    }
-                }
-
-                // Checks if the type of the building is a Government Facility
-                else if (type == BUILD_GOVERNMENTFACILITY)
-                {
-                    // Checks if the user's money is greater than the cost of a Government Facility
-                    if (_variables.Money >= GovernmentFacility.COST)
-                    {
-                        // Find the difference between the user's current amount of money and the cost of the Government Facility
-                        _variables.Money -= GovernmentFacility.COST;
-
-                        // Build a Government Facility at the desired grid space
-                        _variables.Facilities[row, col] = new GovernmentFacility();
-
-                        // Exits the function because it was built 
-                        return true;
-                    }
-                }
-                // Checks if the type of the building is a Powerplant
-                else if (type == BUILD_POWERPLANT)
-                {
-                    // Checks if the user's money is greater than the cost of a Powerplant
-                    if (_variables.Money >= Powerplant.COST)
-                    {
-                        // Find the difference between the user's current amount of money and the cost of the Powerplant
-                        _variables.Money -= Powerplant.COST;
-
-                        // Build a Powerplant at the desired grid space
-                        _variables.Facilities[row, col] = new Powerplant();
-
-                        // Exits the function because it was built
-                        return true;
-                    }
-                }
-                // Checks if the type of the building is a Factory
-                else if (type == BUILD_FACTORY)
-                {
-                    // Checks if the user's money is greater than the cost of a Factory
-                    if (_variables.Money >= Factory.COST)
-                    {
-                        // Find the difference between the user's current amount of money and the cost of the Factory
-                        _variables.Money -= Factory.COST;
-
-                        // Build a Factory at the desired grid space
-                        _variables.Facilities[row, col] = new Factory();
-
-                        // Exits the function because it was built
-                        return true;
-                    }
-                }
-                // Checks if the type of the building is an Environmental Facility
-                else if (type == BUILD_ENVIRONMENTALFACILITY)
-                {
-                    // Checks if the user's money is greater than the cost of an Environmental Facility
-                    if (_variables.Money >= EnvironmentalFacility.COST)
-                    {
-                        // Find the difference between the user's current amount of money and the cost of the Environmental Facility
-                        _variables.Money -= EnvironmentalFacility.COST;
-
-                        // Build an Environmental Facility at the desired grid space
-                        _variables.Facilities[row, col] = new EnvironmentalFacility();
-
-                        // Exits the function because it was built
-                        return true;
-                    }
-                }
-            // Exits the function because nothing could be built
-            return false;   
             }
+
+            // Checks if the type of the building is a Medical Facility
+            else if (type == BUILD_MEDICALFACILITY)
+            {
+                // Checks if the user's money is greater than the cost of a Medical Facility
+                if (_variables.Money >= MedicalFacility.COST)
+                {
+                    // Find the difference between the user's current amount of money and the cost of the Medical Facility
+                    _variables.Money -= MedicalFacility.COST;
+
+                    // Build a Medical Facility at the desired grid space
+                    _variables.Facilities[row, col] = new MedicalFacility();
+
+                    // Exits the function because it was built 
+                    return true;
+                }
+            }
+
+            // Checks if the type of the building is a Government Facility
+            else if (type == BUILD_GOVERNMENTFACILITY)
+            {
+                // Checks if the user's money is greater than the cost of a Government Facility
+                if (_variables.Money >= GovernmentFacility.COST)
+                {
+                    // Find the difference between the user's current amount of money and the cost of the Government Facility
+                    _variables.Money -= GovernmentFacility.COST;
+
+                    // Build a Government Facility at the desired grid space
+                    _variables.Facilities[row, col] = new GovernmentFacility();
+
+                    // Exits the function because it was built 
+                    return true;
+                }
+            }
+            // Checks if the type of the building is a Powerplant
+            else if (type == BUILD_POWERPLANT)
+            {
+                // Checks if the user's money is greater than the cost of a Powerplant
+                if (_variables.Money >= Powerplant.COST)
+                {
+                    // Find the difference between the user's current amount of money and the cost of the Powerplant
+                    _variables.Money -= Powerplant.COST;
+
+                    // Build a Powerplant at the desired grid space
+                    _variables.Facilities[row, col] = new Powerplant();
+
+                    // Exits the function because it was built
+                    return true;
+                }
+            }
+            // Checks if the type of the building is a Factory
+            else if (type == BUILD_FACTORY)
+            {
+                // Checks if the user's money is greater than the cost of a Factory
+                if (_variables.Money >= Factory.COST)
+                {
+                    // Find the difference between the user's current amount of money and the cost of the Factory
+                    _variables.Money -= Factory.COST;
+
+                    // Build a Factory at the desired grid space
+                    _variables.Facilities[row, col] = new Factory();
+
+                    // Exits the function because it was built
+                    return true;
+                }
+            }
+            // Checks if the type of the building is an Environmental Facility
+            else if (type == BUILD_ENVIRONMENTALFACILITY)
+            {
+                // Checks if the user's money is greater than the cost of an Environmental Facility
+                if (_variables.Money >= EnvironmentalFacility.COST)
+                {
+                    // Find the difference between the user's current amount of money and the cost of the Environmental Facility
+                    _variables.Money -= EnvironmentalFacility.COST;
+
+                    // Build an Environmental Facility at the desired grid space
+                    _variables.Facilities[row, col] = new EnvironmentalFacility();
+
+                    // Exits the function because it was built
+                    return true;
+                }
+            }
+            // Exits the function because nothing could be built
+            return false;
+        }
 
         // Calculates the total pollution of the planet
         public int CalculatePollution()
         {
-            // Sets totalPollution as 0 as an int variable
+            // Sets totalPollution as a uint variable
             int totalPollution = 0;
 
             // Loop through the rows of the grid
@@ -226,6 +230,10 @@ namespace SimSpace_JAT
                     totalPollution += _variables.Facilities[i, j].Pollution;
                 }
             }
+            // If totalPollution is less than 0
+            if (totalPollution > 0)
+                // Return the totalPollution as 0
+                return 0;
             // Returns the totalPollution when the loop is finished
             return totalPollution;
         }
@@ -239,78 +247,43 @@ namespace SimSpace_JAT
             // Returns the Score by using the given formula of multiplying the happy population by 3, adding it onto contentedpopulation and then subtracting pollution from it 
             return 3 * _wrapper.CalculateHappyPopulation() + contentedPopulation - _wrapper.CalculatePollution();
         }
+
         // A method used to save the highscore
         public void SaveHighScore()
         {
-            //// Handles any errors that may occur
-            //try
-            //{
-            //    // Creates a file named Highscore.txt if the file is not found
-            //    using (StreamWriter file = new StreamWriter("Highscore.txt"))
-            //    {
-            //        // Writes down the highscore of the player
-            //        file.WriteLine(_variables.Score);
-            //    }
-            //}
-            //// Ends try with catch
-            //catch
-            //{
-
-            //}
+            // Checks if the file exists
+            if (File.Exists("Highscore.txt"))
+            {
+                // Read the file using Streamreader
+                using (StreamReader sr = new StreamReader("Highscore.txt"))
+                {
+                    // Reads the file and saves it as the highestscore variable
+                    int.TryParse(sr.ReadLine(), out highestScore);
+                    // Checks if the current score is greater than the highest score
+                    if (_variables.Score > highestScore)
+                    {
+                        // Creates a file named Highscore.txt if the file is not found
+                        using (StreamWriter sw = new StreamWriter("Highscore.txt"))
+                        {
+                            // Writes down the highscore of the player
+                            sw.WriteLine(_variables.Score);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                // Creates a file named Highscore.txt if the file is not found
+                using (StreamWriter sw = new StreamWriter("Highscore.txt"))
+                {
+                    // Writes down the highscore of the player
+                    sw.WriteLine(_variables.Score);
+                }
+            }
         }
 
         // A method used to load the highscore
         public void LoadHighScore()
-        {
-            //// Handles any errors that may occur
-            //try
-            //{
-            //    // Checks if the file "Highscore" exists or not
-            //    if (File.Exists("Highscore.txt") == true)
-            //    {
-            //        // If the file exists, read the file using StreamReader
-            //        using (StreamReader file = new StreamReader("Highscore.txt"))
-            //        {
-            //            // Set the text within the file as the Highscore variable
-
-            //        }
-            //    }
-            //    // If the file does not, display a messagebox
-            //    else
-            //    {
-            //        // Have a messagebox that displays "File could not be found" appear
-            //        MessageBox.Show("File could not be found.");
-            //    }
-            //}
-            //// Ends try with catch
-            //catch
-            //{
-
-            //}
-        }
-/*
-        // A method used to save the highscore
-        public void SaveHighScore(string fileName)
-        {
-            // Handles any errors that may occur
-            try
-            {
-                    // Creates a file named Highscore.txt if the file is not found
-                    using (StreamWriter file = new StreamWriter("Highscore.txt"))
-                    {
-                        // Writes down the highscore of the player
-                        file.WriteLine(_variables.Score);
-                    } 
-             }
-            // Ends try with catch
-            catch
-            {
-
-            }
-        }
-        
-        // A method used to load the highscore
-        public void LoadHighScore(string fileName)
         {
             // Handles any errors that may occur
             try
@@ -320,9 +293,23 @@ namespace SimSpace_JAT
                 {
                     // If the file exists, read the file using StreamReader
                     using (StreamReader file = new StreamReader("Highscore.txt"))
-                    {   
+                    {
                         // Set the text within the file as the Highscore variable
-                        
+                        preHighscore = int.Parse(file.ReadToEnd());
+
+                        // Checks if current score is greater than previous highscore
+                        if (_variables.Score > preHighscore)
+                        {
+                            // Sets highest score variable as current score variable if it is greater
+                            highestScore = _variables.Score;
+                        }
+                        // If current score is less than previous highscore
+                        else
+                        {
+                            // Set the highestscore as the previous highscore
+                            highestScore = preHighscore;
+                        }
+
                     }
                 }
                 // If the file does not, display a messagebox
@@ -338,7 +325,6 @@ namespace SimSpace_JAT
 
             }
         }
-*/
     }
 }
 
