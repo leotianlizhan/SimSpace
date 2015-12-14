@@ -186,6 +186,7 @@
             this.btnCredits.TabIndex = 2;
             this.btnCredits.Text = "CREDITS";
             this.btnCredits.UseVisualStyleBackColor = false;
+            this.btnCredits.Click += new System.EventHandler(this.btnCredits_Click);
             this.btnCredits.MouseEnter += new System.EventHandler(this.btnCredits_MouseEnter);
             this.btnCredits.MouseLeave += new System.EventHandler(this.btnCredits_MouseLeave);
             // 

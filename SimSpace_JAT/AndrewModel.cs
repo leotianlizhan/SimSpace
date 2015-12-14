@@ -87,7 +87,7 @@ namespace SimSpace_JAT
         }
 
         /// <summary>
-        /// Attempt to build a store at the row and column specified.
+        /// Attempt to build a store at the row and column specifie
         /// </summary>
         /// <param name="row">The row of the construction site.</param>
         /// <param name="col">The column of the construction site.</param>

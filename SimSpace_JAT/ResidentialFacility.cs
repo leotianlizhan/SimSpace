@@ -61,7 +61,7 @@ namespace SimSpace_JAT
         {
             //check if the facility is filled, if it's not, increase the population
             if(!IsFilled())
-                Population += _maxPopulation / POPULATION_GROWTH_FACTOR;
+                Population += (_maxPopulation / POPULATION_GROWTH_FACTOR);
         }
         /// <summary>
         /// Check if the facility is filled to the maximum population
@@ -79,7 +79,7 @@ namespace SimSpace_JAT
         {
             get
             {
-                return base.Revenue * Population / 1000;
+                return base.Revenue * (Population / 1000);
             }
         }
         /// <summary>

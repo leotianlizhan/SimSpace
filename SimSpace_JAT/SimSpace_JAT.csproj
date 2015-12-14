@@ -48,6 +48,18 @@
     <Compile Include="AndrewModel.cs" />
     <Compile Include="ComfortableHome.cs" />
     <Compile Include="CommercialFacility.cs" />
+    <Compile Include="PlanetJackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanetJackForm.Designer.cs">
+      <DependentUpon>PlanetJackForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlanetAndrewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanetAndrewForm.Designer.cs">
+      <DependentUpon>PlanetAndrewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dirt.cs" />
     <Compile Include="EmergencyServices.cs" />
     <Compile Include="EnvironmentalFacility.cs" />
@@ -82,6 +94,12 @@
     <Compile Include="SharedVariables.cs" />
     <Compile Include="Store.cs" />
     <Compile Include="TianliModel.cs" />
+    <EmbeddedResource Include="PlanetJackForm.resx">
+      <DependentUpon>PlanetJackForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanetAndrewForm.resx">
+      <DependentUpon>PlanetAndrewForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LevelSelectorForm.resx">
       <DependentUpon>LevelSelectorForm.cs</DependentUpon>
     </EmbeddedResource>

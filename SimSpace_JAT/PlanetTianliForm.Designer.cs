@@ -1,4 +1,5 @@
-﻿namespace SimSpace_JAT
+﻿//Tianli
+namespace SimSpace_JAT
 {
     partial class PlanetTianliForm
     {

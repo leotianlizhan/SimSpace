@@ -17,33 +17,6 @@ namespace SimSpace_JAT
 {
     public partial class LevelSelectorForm : Form
     {
-        private struct Star
-        {
-            private Point _location;
-            private Point _velocity;
-            public Point Location
-            {
-                get
-                {
-                    return _location;
-                }
-                set
-                {
-                    _location = value;
-                }
-            }
-            public Point Velocity
-            {
-                get
-                {
-                    return _velocity;
-                }
-                set
-                {
-                    _velocity = value;
-                }
-            }            
-        }
         public LevelSelectorForm()
         {
             InitializeComponent();
@@ -66,16 +39,16 @@ namespace SimSpace_JAT
         //starts the game with small grid
         private void btnStartSmall_Click(object sender, EventArgs e)
         {
-            //PlanetJackForm gameForm = new PlanetJackForm();
-            //gameForm.Show();
+            PlanetJackForm gameForm = new PlanetJackForm();
+            gameForm.Show();
             pnlSizeSelect.Visible = false;
         }
 
         //starts the game with medium grid
         private void btnStartMedium_Click(object sender, EventArgs e)
         {
-            //PlanetAndrewForm gameForm = new PlanetAndrewForm();
-            //gameForm.Show();
+            PlanetAndrewForm gameForm = new PlanetAndrewForm();
+            gameForm.Show();
             pnlSizeSelect.Visible = false;
         }
 
@@ -123,18 +96,18 @@ namespace SimSpace_JAT
                                     form.Show();
                                     return;
                                 }
-                                //else if (size == PlanetAndrewForm.GRID_SIZE)
-                                //{
-                                //    PlanetAndrewForm form = new PlanetAndrewForm(openFileDialog.FileName);
-                                //    form.Show();
-                                //    return;
-                                //}
-                                //else if (size == PlanetJackForm.GRID_SIZE)
-                                //{
-                                //    PlanetJackForm form = new PlanetJackForm(openFileDialog.FileName);
-                                //    form.Show();
-                                //    return;
-                                //}
+                                else if (size == PlanetAndrewForm.GRID_SIZE)
+                                {
+                                    PlanetAndrewForm form = new PlanetAndrewForm(openFileDialog.FileName);
+                                    form.Show();
+                                    return;
+                                }
+                                else if (size == PlanetJackForm.GRID_SIZE)
+                                {
+                                    PlanetJackForm form = new PlanetJackForm(openFileDialog.FileName);
+                                    form.Show();
+                                    return;
+                                }
                                 else
                                 {
                                     MessageBox.Show("INVALID GRID SIZE!!");
@@ -215,39 +188,9 @@ namespace SimSpace_JAT
             btnBack.ForeColor = Color.White;
         }
 
-        private void StarMotionMain()
+        private void btnCredits_Click(object sender, EventArgs e)
         {
-            int lastTime = Environment.TickCount;
-            int curTime;
-            int timeElapsed = 0;
-            while (true)
-            {
-                curTime = Environment.TickCount;
-                timeElapsed = curTime - lastTime;
-                if (timeElapsed >= 20)
-                {
-                    UpdateStars();
-                    Refresh();
-                    lastTime = curTime;
-                }
-            }
-        }
-
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            base.OnPaint(e);
-
-            RenderStars(e);
-        }
-
-        private void UpdateStars()
-        {
-            
-        }
-
-        private void RenderStars(PaintEventArgs e)
-        {
-
+            MessageBox.Show("Made by Tianli, Andrew, and Jack");
         }
 
 
