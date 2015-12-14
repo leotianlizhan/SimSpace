@@ -82,6 +82,9 @@ namespace SimSpace_JAT
         private bool[,] _highlightedGrid = null;
         /********** TOOLBAR DATA *************/
 
+        // Create an long variable to store the player's money for the current month (by Andrew)
+        long currentMoney = 0;
+
         /// <summary>
         /// Constructs the 30x30 form
         /// </summary>
@@ -421,7 +424,7 @@ namespace SimSpace_JAT
         private void UpdateScoreBoard()
         {
             //display all the information in labels with proper formatting
-            lblMoney.Text = String.Format("Money: {0:C}", _planet.Money);
+            lblMoney.Text = String.Format("Money: {0:C} ({1:C})", _planet.Money, _planet.Money - currentMoney);
             lblPopulation.Text = String.Format("Population: {0:n0}", _planet.CalculatePopulation());
             lblPollution.Text = String.Format("Pollution: {0:n0}", _planet.CalculatePollution());
             if (_planet.CalculatePower() < 0)
@@ -431,6 +434,8 @@ namespace SimSpace_JAT
             lblPower.Text = String.Format("Power: {0:n0}", _planet.CalculatePower());
             lblScore.Text = String.Format("Score: {0:n0}", _planet.Score);
             lblTime.Text = String.Format("Months Passed: {0:n0}", _planet.TimeElapsed);
+            // Store the player's current balance in a variable
+            currentMoney = _planet.Money;
         }
 
         //beautify the button, change text color
@@ -461,7 +466,18 @@ namespace SimSpace_JAT
                             {
                                 // Display the name of the facility in the side bar
                                 lblSelectedFacilityName.Text = "Emergency Services";
-
+                                // Display the monthly maintenance cost of the facility in the side bar
+                                lblSelectedFacilityMaintCost.Text = "Maintenance Cost: $" + _planet.Facilities[i,j].Maintenance.ToString();
+                                // Display the monthly power usage of the facility in the side bar
+                                lblSelectedFacilityPowerGeneration.Text = "Power Generation: " + _planet.Facilities[i, j].Power.ToString();
+                                // Display the monthly revenue of the facility in the side bar
+                                lblSelectedFacilityRevenue.Text = "Revenue: $" + _planet.Facilities[i, j].Revenue.ToString();
+                                // Display the pollution output of the facility in the side bar
+                                lblSelectedFacilityPollution.Text = "Pollution: " + _planet.Facilities[i, j].Pollution.ToString();
+                                // Display the population of the facility in the side bar
+                                lblSelectedFacilityPopulation.Text = "Population: 0";
+                                // Display the location of the facility in the side bar
+                                lblSelectedFacilityLocation.Text = "Location: (" + i.ToString() + ", " + j.ToString() + ")";
                                 // Show the facility stats side panel
                                 pnlFacilityStats.Visible = true;
                             }
@@ -469,7 +485,18 @@ namespace SimSpace_JAT
                             {
                                 // Display the name of the facility in the side bar
                                 lblSelectedFacilityName.Text = "School";
-
+                                // Display the monthly maintenance cost of the facility in the side bar
+                                lblSelectedFacilityMaintCost.Text = "Maintenance Cost: " + _planet.Facilities[i, j].Maintenance.ToString();
+                                // Display the monthly power usage of the facility in the side bar
+                                lblSelectedFacilityPowerGeneration.Text = "Power Generation: " + _planet.Facilities[i, j].Power.ToString();
+                                // Display the monthly revenue of the facility in the side bar
+                                lblSelectedFacilityRevenue.Text = "Revenue: $" + _planet.Facilities[i, j].Revenue.ToString();
+                                // Display the pollution output of the facility in the side bar
+                                lblSelectedFacilityPollution.Text = "Pollution: " + _planet.Facilities[i, j].Pollution.ToString();
+                                // Display the population of the facility in the side bar
+                                lblSelectedFacilityPopulation.Text = "Population: 0";
+                                // Display the location of the facility in the side bar
+                                lblSelectedFacilityLocation.Text = "Location: (" + i.ToString() + ", " + j.ToString() + ")";
                                 // Show the facility stats side panel
                                 pnlFacilityStats.Visible = true;
                             }
@@ -477,7 +504,18 @@ namespace SimSpace_JAT
                             {
                                 // Display the name of the facility in the side bar
                                 lblSelectedFacilityName.Text = "Medical Facility";
-
+                                // Display the monthly maintenance cost of the facility in the side bar
+                                lblSelectedFacilityMaintCost.Text = "Maintenance Cost: " + _planet.Facilities[i, j].Maintenance.ToString();
+                                // Display the monthly power usage of the facility in the side bar
+                                lblSelectedFacilityPowerGeneration.Text = "Power Generation: " + _planet.Facilities[i, j].Power.ToString();
+                                // Display the monthly revenue of the facility in the side bar
+                                lblSelectedFacilityRevenue.Text = "Revenue: $" + _planet.Facilities[i, j].Revenue.ToString();
+                                // Display the pollution output of the facility in the side bar
+                                lblSelectedFacilityPollution.Text = "Pollution: " + _planet.Facilities[i, j].Pollution.ToString();
+                                // Display the population of the facility in the side bar
+                                lblSelectedFacilityPopulation.Text = "Population: 0";
+                                // Display the location of the facility in the side bar
+                                lblSelectedFacilityLocation.Text = "Location: (" + i.ToString() + ", " + j.ToString() + ")";
                                 // Show the facility stats side panel
                                 pnlFacilityStats.Visible = true;
                             }
@@ -485,7 +523,18 @@ namespace SimSpace_JAT
                             {
                                 // Display the name of the facility in the side bar
                                 lblSelectedFacilityName.Text = "Government Facility";
-
+                                // Display the monthly maintenance cost of the facility in the side bar
+                                lblSelectedFacilityMaintCost.Text = "Maintenance Cost: " + _planet.Facilities[i, j].Maintenance.ToString();
+                                // Display the monthly power usage of the facility in the side bar
+                                lblSelectedFacilityPowerGeneration.Text = "Power Generation: " + _planet.Facilities[i, j].Power.ToString();
+                                // Display the monthly revenue of the facility in the side bar
+                                lblSelectedFacilityRevenue.Text = "Revenue: $" + _planet.Facilities[i, j].Revenue.ToString();
+                                // Display the pollution output of the facility in the side bar
+                                lblSelectedFacilityPollution.Text = "Pollution: " + _planet.Facilities[i, j].Pollution.ToString();
+                                // Display the population of the facility in the side bar
+                                lblSelectedFacilityPopulation.Text = "Population: 0";
+                                // Display the location of the facility in the side bar
+                                lblSelectedFacilityLocation.Text = "Location: (" + i.ToString() + ", " + j.ToString() + ")";
                                 // Show the facility stats side panel
                                 pnlFacilityStats.Visible = true;
                             }
@@ -493,7 +542,18 @@ namespace SimSpace_JAT
                             {
                                 // Display the name of the facility in the side bar
                                 lblSelectedFacilityName.Text = "Power Plant";
-
+                                // Display the monthly maintenance cost of the facility in the side bar
+                                lblSelectedFacilityMaintCost.Text = "Maintenance Cost: " + _planet.Facilities[i, j].Maintenance.ToString();
+                                // Display the monthly power usage of the facility in the side bar
+                                lblSelectedFacilityPowerGeneration.Text = "Power Generation: " + _planet.Facilities[i, j].Power.ToString();
+                                // Display the monthly revenue of the facility in the side bar
+                                lblSelectedFacilityRevenue.Text = "Revenue: $" + _planet.Facilities[i, j].Revenue.ToString();
+                                // Display the pollution output of the facility in the side bar
+                                lblSelectedFacilityPollution.Text = "Pollution: " + _planet.Facilities[i, j].Pollution.ToString();
+                                // Display the population of the facility in the side bar
+                                lblSelectedFacilityPopulation.Text = "Population: 0";
+                                // Display the location of the facility in the side bar
+                                lblSelectedFacilityLocation.Text = "Location: (" + i.ToString() + ", " + j.ToString() + ")";
                                 // Show the facility stats side panel
                                 pnlFacilityStats.Visible = true;
                             }
@@ -501,7 +561,18 @@ namespace SimSpace_JAT
                             {
                                 // Display the name of the facility in the side bar
                                 lblSelectedFacilityName.Text = "Luxury Home";
-
+                                // Display the monthly maintenance cost of the facility in the side bar
+                                lblSelectedFacilityMaintCost.Text = "Maintenance Cost: " + _planet.Facilities[i, j].Maintenance.ToString();
+                                // Display the monthly power usage of the facility in the side bar
+                                lblSelectedFacilityPowerGeneration.Text = "Power Generation: " + _planet.Facilities[i, j].Power.ToString();
+                                // Display the monthly revenue of the facility in the side bar
+                                lblSelectedFacilityRevenue.Text = "Revenue: $" + _planet.Facilities[i, j].Revenue.ToString();
+                                // Display the pollution output of the facility in the side bar
+                                lblSelectedFacilityPollution.Text = "Pollution: " + _planet.Facilities[i, j].Pollution.ToString();
+                                // Display the population of the facility in the side bar
+                                lblSelectedFacilityPopulation.Text = "Population: " + ((ResidentialFacility)_planet.Facilities[i, j]).Population;
+                                // Display the location of the facility in the side bar
+                                lblSelectedFacilityLocation.Text = "Location: (" + i.ToString() + ", " + j.ToString() + ")";
                                 // Show the facility stats side panel
                                 pnlFacilityStats.Visible = true;
                             }
@@ -509,7 +580,18 @@ namespace SimSpace_JAT
                             {
                                 // Display the name of the facility in the side bar
                                 lblSelectedFacilityName.Text = "Comfortable Home";
-
+                                // Display the monthly maintenance cost of the facility in the side bar
+                                lblSelectedFacilityMaintCost.Text = "Maintenance Cost: " + _planet.Facilities[i, j].Maintenance.ToString();
+                                // Display the monthly power usage of the facility in the side bar
+                                lblSelectedFacilityPowerGeneration.Text = "Power Generation: " + _planet.Facilities[i, j].Power.ToString();
+                                // Display the monthly revenue of the facility in the side bar
+                                lblSelectedFacilityRevenue.Text = "Revenue: $" + _planet.Facilities[i, j].Revenue.ToString();
+                                // Display the pollution output of the facility in the side bar
+                                lblSelectedFacilityPollution.Text = "Pollution: " + _planet.Facilities[i, j].Pollution.ToString();
+                                // Display the population of the facility in the side bar
+                                lblSelectedFacilityPopulation.Text = "Population: " + ((ResidentialFacility)_planet.Facilities[i, j]).Population;
+                                // Display the location of the facility in the side bar
+                                lblSelectedFacilityLocation.Text = "Location: (" + i.ToString() + ", " + j.ToString() + ")";
                                 // Show the facility stats side panel
                                 pnlFacilityStats.Visible = true;
                             }
@@ -517,7 +599,18 @@ namespace SimSpace_JAT
                             {
                                 // Display the name of the facility in the side bar
                                 lblSelectedFacilityName.Text = "Affordable Home";
-
+                                // Display the monthly maintenance cost of the facility in the side bar
+                                lblSelectedFacilityMaintCost.Text = "Maintenance Cost: " + _planet.Facilities[i, j].Maintenance.ToString();
+                                // Display the monthly power usage of the facility in the side bar
+                                lblSelectedFacilityPowerGeneration.Text = "Power Generation: " + _planet.Facilities[i, j].Power.ToString();
+                                // Display the monthly revenue of the facility in the side bar
+                                lblSelectedFacilityRevenue.Text = "Revenue: $" + _planet.Facilities[i, j].Revenue.ToString();
+                                // Display the pollution output of the facility in the side bar
+                                lblSelectedFacilityPollution.Text = "Pollution: " + _planet.Facilities[i, j].Pollution.ToString();
+                                // Display the population of the facility in the side bar
+                                lblSelectedFacilityPopulation.Text = "Population: " + ((ResidentialFacility)_planet.Facilities[i, j]).Population;
+                                // Display the location of the facility in the side bar
+                                lblSelectedFacilityLocation.Text = "Location: (" + i.ToString() + ", " + j.ToString() + ")";
                                 // Show the facility stats side panel
                                 pnlFacilityStats.Visible = true;
                             }
@@ -525,7 +618,18 @@ namespace SimSpace_JAT
                             {
                                 // Display the name of the facility in the side bar
                                 lblSelectedFacilityName.Text = "Factory";
-
+                                // Display the monthly maintenance cost of the facility in the side bar
+                                lblSelectedFacilityMaintCost.Text = "Maintenance Cost: " + _planet.Facilities[i, j].Maintenance.ToString();
+                                // Display the monthly power usage of the facility in the side bar
+                                lblSelectedFacilityPowerGeneration.Text = "Power Generation: " + _planet.Facilities[i, j].Power.ToString();
+                                // Display the monthly revenue of the facility in the side bar
+                                lblSelectedFacilityRevenue.Text = "Revenue: $" + _planet.Facilities[i, j].Revenue.ToString();
+                                // Display the pollution output of the facility in the side bar
+                                lblSelectedFacilityPollution.Text = "Pollution: " + _planet.Facilities[i, j].Pollution.ToString();
+                                // Display the population of the facility in the side bar
+                                lblSelectedFacilityPopulation.Text = "Population: 0";
+                                // Display the location of the facility in the side bar
+                                lblSelectedFacilityLocation.Text = "Location: (" + i.ToString() + ", " + j.ToString() + ")";
                                 // Show the facility stats side panel
                                 pnlFacilityStats.Visible = true;
                             }
@@ -533,7 +637,18 @@ namespace SimSpace_JAT
                             {
                                 // Display the name of the facility in the side bar
                                 lblSelectedFacilityName.Text = "Environmental Facility";
-
+                                // Display the monthly maintenance cost of the facility in the side bar
+                                lblSelectedFacilityMaintCost.Text = "Maintenance Cost: " + _planet.Facilities[i, j].Maintenance.ToString();
+                                // Display the monthly power usage of the facility in the side bar
+                                lblSelectedFacilityPowerGeneration.Text = "Power Generation: " + _planet.Facilities[i, j].Power.ToString();
+                                // Display the monthly revenue of the facility in the side bar
+                                lblSelectedFacilityRevenue.Text = "Revenue: $" + _planet.Facilities[i, j].Revenue.ToString();
+                                // Display the pollution output of the facility in the side bar
+                                lblSelectedFacilityPollution.Text = "Pollution: " + _planet.Facilities[i, j].Pollution.ToString();
+                                // Display the population of the facility in the side bar
+                                lblSelectedFacilityPopulation.Text = "Population: 0";
+                                // Display the location of the facility in the side bar
+                                lblSelectedFacilityLocation.Text = "Location: (" + i.ToString() + ", " + j.ToString() + ")";
                                 // Show the facility stats side panel
                                 pnlFacilityStats.Visible = true;
                             }
@@ -541,7 +656,18 @@ namespace SimSpace_JAT
                             {
                                 // Display the name of the facility in the side bar
                                 lblSelectedFacilityName.Text = "Store";
-
+                                // Display the monthly maintenance cost of the facility in the side bar
+                                lblSelectedFacilityMaintCost.Text = "Maintenance Cost: " + _planet.Facilities[i, j].Maintenance.ToString();
+                                // Display the monthly power usage of the facility in the side bar
+                                lblSelectedFacilityPowerGeneration.Text = "Power Generation: " + _planet.Facilities[i, j].Power.ToString();
+                                // Display the monthly revenue of the facility in the side bar
+                                lblSelectedFacilityRevenue.Text = "Revenue: $" + _planet.Facilities[i, j].Revenue.ToString();
+                                // Display the pollution output of the facility in the side bar
+                                lblSelectedFacilityPollution.Text = "Pollution: " + _planet.Facilities[i, j].Pollution.ToString();
+                                // Display the population of the facility in the side bar
+                                lblSelectedFacilityPopulation.Text = "Population: 0";
+                                // Display the location of the facility in the side bar
+                                lblSelectedFacilityLocation.Text = "Location: (" + i.ToString() + ", " + j.ToString() + ")";
                                 // Show the facility stats side panel
                                 pnlFacilityStats.Visible = true;
                             }
@@ -549,7 +675,16 @@ namespace SimSpace_JAT
                             {
                                 // Display the name of the facility in the side bar
                                 lblSelectedFacilityName.Text = "Restaurant";
-
+                                // Display the monthly maintenance cost of the facility in the side bar
+                                lblSelectedFacilityMaintCost.Text = "Maintenance Cost: " + _planet.Facilities[i, j].Maintenance.ToString();
+                                // Display the monthly power usage of the facility in the side bar
+                                lblSelectedFacilityPowerGeneration.Text = "Power Generation: " + _planet.Facilities[i, j].Power.ToString();
+                                // Display the monthly revenue of the facility in the side bar
+                                lblSelectedFacilityRevenue.Text = "Revenue: $" + _planet.Facilities[i, j].Revenue.ToString();
+                                // Display the pollution output of the facility in the side bar
+                                lblSelectedFacilityPollution.Text = "Pollution: " + _planet.Facilities[i, j].Pollution.ToString();
+                                // Display the location of the facility in the side bar
+                                lblSelectedFacilityLocation.Text = "Location: (" + i.ToString() + ", " + j.ToString() + ")";
                                 // Show the facility stats side panel
                                 pnlFacilityStats.Visible = true;
                             }
@@ -557,7 +692,18 @@ namespace SimSpace_JAT
                             {
                                 // Display the name of the facility in the side bar
                                 lblSelectedFacilityName.Text = "Office";
-
+                                // Display the monthly maintenance cost of the facility in the side bar
+                                lblSelectedFacilityMaintCost.Text = "Maintenance Cost: " + _planet.Facilities[i, j].Maintenance.ToString();
+                                // Display the monthly power usage of the facility in the side bar
+                                lblSelectedFacilityPowerGeneration.Text = "Power Generation: " + _planet.Facilities[i, j].Power.ToString();
+                                // Display the monthly revenue of the facility in the side bar
+                                lblSelectedFacilityRevenue.Text = "Revenue: $" + _planet.Facilities[i, j].Revenue.ToString();
+                                // Display the pollution output of the facility in the side bar
+                                lblSelectedFacilityPollution.Text = "Pollution: " + _planet.Facilities[i, j].Pollution.ToString();
+                                // Display the population of the facility in the side bar
+                                lblSelectedFacilityPopulation.Text = "Population: 0";
+                                // Display the location of the facility in the side bar
+                                lblSelectedFacilityLocation.Text = "Location: (" + i.ToString() + ", " + j.ToString() + ")";
                                 // Show the facility stats side panel
                                 pnlFacilityStats.Visible = true;
                             }

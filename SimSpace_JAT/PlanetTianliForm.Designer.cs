@@ -42,7 +42,7 @@
             this.pnlFacilityStats = new System.Windows.Forms.Panel();
             this.lblSelectedFacilityName = new System.Windows.Forms.Label();
             this.lblSelectedFacilityMaintCost = new System.Windows.Forms.Label();
-            this.lblSelectedFacilityPowerUsage = new System.Windows.Forms.Label();
+            this.lblSelectedFacilityPowerGeneration = new System.Windows.Forms.Label();
             this.lblSelectedFacilityRevenue = new System.Windows.Forms.Label();
             this.lblSelectedFacilityPollution = new System.Windows.Forms.Label();
             this.lblSelectedFacilityPopulation = new System.Windows.Forms.Label();
@@ -180,7 +180,7 @@
             this.pnlFacilityStats.Controls.Add(this.lblSelectedFacilityPopulation);
             this.pnlFacilityStats.Controls.Add(this.lblSelectedFacilityPollution);
             this.pnlFacilityStats.Controls.Add(this.lblSelectedFacilityRevenue);
-            this.pnlFacilityStats.Controls.Add(this.lblSelectedFacilityPowerUsage);
+            this.pnlFacilityStats.Controls.Add(this.lblSelectedFacilityPowerGeneration);
             this.pnlFacilityStats.Controls.Add(this.lblSelectedFacilityMaintCost);
             this.pnlFacilityStats.Controls.Add(this.lblSelectedFacilityName);
             this.pnlFacilityStats.Location = new System.Drawing.Point(41, 327);
@@ -213,17 +213,17 @@
             this.lblSelectedFacilityMaintCost.TabIndex = 8;
             this.lblSelectedFacilityMaintCost.Text = "Maintenance Cost: ";
             // 
-            // lblSelectedFacilityPowerUsage
+            // lblSelectedFacilityPowerGeneration
             // 
-            this.lblSelectedFacilityPowerUsage.AutoSize = true;
-            this.lblSelectedFacilityPowerUsage.BackColor = System.Drawing.Color.Transparent;
-            this.lblSelectedFacilityPowerUsage.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectedFacilityPowerUsage.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblSelectedFacilityPowerUsage.Location = new System.Drawing.Point(25, 80);
-            this.lblSelectedFacilityPowerUsage.Name = "lblSelectedFacilityPowerUsage";
-            this.lblSelectedFacilityPowerUsage.Size = new System.Drawing.Size(78, 16);
-            this.lblSelectedFacilityPowerUsage.TabIndex = 9;
-            this.lblSelectedFacilityPowerUsage.Text = "Power Usage: ";
+            this.lblSelectedFacilityPowerGeneration.AutoSize = true;
+            this.lblSelectedFacilityPowerGeneration.BackColor = System.Drawing.Color.Transparent;
+            this.lblSelectedFacilityPowerGeneration.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectedFacilityPowerGeneration.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblSelectedFacilityPowerGeneration.Location = new System.Drawing.Point(25, 80);
+            this.lblSelectedFacilityPowerGeneration.Name = "lblSelectedFacilityPowerGeneration";
+            this.lblSelectedFacilityPowerGeneration.Size = new System.Drawing.Size(104, 16);
+            this.lblSelectedFacilityPowerGeneration.TabIndex = 9;
+            this.lblSelectedFacilityPowerGeneration.Text = "Power Generation: ";
             // 
             // lblSelectedFacilityRevenue
             // 
@@ -314,7 +314,7 @@
         private System.Windows.Forms.Label lblSelectedFacilityPopulation;
         private System.Windows.Forms.Label lblSelectedFacilityPollution;
         private System.Windows.Forms.Label lblSelectedFacilityRevenue;
-        private System.Windows.Forms.Label lblSelectedFacilityPowerUsage;
+        private System.Windows.Forms.Label lblSelectedFacilityPowerGeneration;
         private System.Windows.Forms.Label lblSelectedFacilityMaintCost;
         private System.Windows.Forms.Label lblSelectedFacilityName;
 
