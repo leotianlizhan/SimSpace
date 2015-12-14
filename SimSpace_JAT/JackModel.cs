@@ -257,16 +257,26 @@ namespace SimSpace_JAT
                 // Read the file using Streamreader
                 using (StreamReader sr = new StreamReader("Highscore.txt"))
                 {
-                    // Reads the file and saves it as the highestscore variable
-                    int.TryParse(sr.ReadLine(), out highestScore);
-                    // Checks if the current score is greater than the highest score
-                    if (_variables.Score > highestScore)
+                    if (highestScore == 0)
                     {
-                        // Creates a file named Highscore.txt if the file is not found
+                        // Reads the file and saves it as the highestscore variable
+                        int.TryParse(sr.ReadLine(), out highestScore);
+                        // Checks if the current score is greater than the highest score
+                        if (_variables.Score > highestScore)
+                        {
+                            // Creates a file named Highscore.txt if the file is not found
+                            using (StreamWriter sw = new StreamWriter("Highscore.txt"))
+                            {
+                                // Writes down the highscore of the player
+                                sw.WriteLine(_variables.Score);
+                            }
+                        }
+                    }
+                    else
+                    {
                         using (StreamWriter sw = new StreamWriter("Highscore.txt"))
                         {
-                            // Writes down the highscore of the player
-                            sw.WriteLine(_variables.Score);
+                            sw.WriteLine(highestScore);
                         }
                     }
                 }
