@@ -188,9 +188,10 @@ namespace SimSpace_JAT
             btnBack.ForeColor = Color.White;
         }
 
+        // Show the credits upon button click
         private void btnCredits_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Made by Tianli, Andrew, and Jack");
+            MessageBox.Show("Core code made by Tianli, Andrew, and Jack for ICS4U at Richmond Green SS.\r\nDate of publication: December 14, 2015.\r\nTeacher/Instructor: Mr. Jeremy Hsiung.\r\nMessage from the developers: Hello world!", "Credits");
         }
 
 

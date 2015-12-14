@@ -50,3 +50,5 @@ F:\Compsci Temp\SimSpace_Git2\SimSpace\SimSpace_JAT\obj\Debug\SimSpace_JAT.Prope
 F:\Compsci Temp\SimSpace_Git2\SimSpace\SimSpace_JAT\obj\Debug\SimSpace_JAT.csproj.GenerateResource.Cache
 F:\CS12\SimSpace\SimSpace_JAT\obj\Debug\SimSpace_JAT.PlanetAndrewForm.resources
 F:\CS12\SimSpace\SimSpace_JAT\obj\Debug\SimSpace_JAT.PlanetJackForm.resources
+F:\Compsci Temp\SimSpace_Git2\SimSpace\SimSpace_JAT\obj\Debug\SimSpace_JAT.PlanetJackForm.resources
+F:\Compsci Temp\SimSpace_Git2\SimSpace\SimSpace_JAT\obj\Debug\SimSpace_JAT.PlanetAndrewForm.resources

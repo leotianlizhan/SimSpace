@@ -41,13 +41,13 @@ namespace SimSpace_JAT
             this.lblMoney = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
             this.pnlFacilityStats = new System.Windows.Forms.Panel();
-            this.lblSelectedFacilityName = new System.Windows.Forms.Label();
-            this.lblSelectedFacilityMaintCost = new System.Windows.Forms.Label();
-            this.lblSelectedFacilityPowerGeneration = new System.Windows.Forms.Label();
-            this.lblSelectedFacilityRevenue = new System.Windows.Forms.Label();
-            this.lblSelectedFacilityPollution = new System.Windows.Forms.Label();
-            this.lblSelectedFacilityPopulation = new System.Windows.Forms.Label();
             this.lblSelectedFacilityLocation = new System.Windows.Forms.Label();
+            this.lblSelectedFacilityPopulation = new System.Windows.Forms.Label();
+            this.lblSelectedFacilityPollution = new System.Windows.Forms.Label();
+            this.lblSelectedFacilityRevenue = new System.Windows.Forms.Label();
+            this.lblSelectedFacilityPowerGeneration = new System.Windows.Forms.Label();
+            this.lblSelectedFacilityMaintCost = new System.Windows.Forms.Label();
+            this.lblSelectedFacilityName = new System.Windows.Forms.Label();
             this.pnlScoreBoard.SuspendLayout();
             this.pnlFacilityStats.SuspendLayout();
             this.SuspendLayout();
@@ -190,65 +190,17 @@ namespace SimSpace_JAT
             this.pnlFacilityStats.TabIndex = 2;
             this.pnlFacilityStats.Visible = false;
             // 
-            // lblSelectedFacilityName
+            // lblSelectedFacilityLocation
             // 
-            this.lblSelectedFacilityName.AutoSize = true;
-            this.lblSelectedFacilityName.BackColor = System.Drawing.Color.Transparent;
-            this.lblSelectedFacilityName.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectedFacilityName.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblSelectedFacilityName.Location = new System.Drawing.Point(14, 19);
-            this.lblSelectedFacilityName.Name = "lblSelectedFacilityName";
-            this.lblSelectedFacilityName.Size = new System.Drawing.Size(137, 27);
-            this.lblSelectedFacilityName.TabIndex = 7;
-            this.lblSelectedFacilityName.Text = "FacilityName";
-            // 
-            // lblSelectedFacilityMaintCost
-            // 
-            this.lblSelectedFacilityMaintCost.AutoSize = true;
-            this.lblSelectedFacilityMaintCost.BackColor = System.Drawing.Color.Transparent;
-            this.lblSelectedFacilityMaintCost.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectedFacilityMaintCost.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblSelectedFacilityMaintCost.Location = new System.Drawing.Point(25, 55);
-            this.lblSelectedFacilityMaintCost.Name = "lblSelectedFacilityMaintCost";
-            this.lblSelectedFacilityMaintCost.Size = new System.Drawing.Size(105, 16);
-            this.lblSelectedFacilityMaintCost.TabIndex = 8;
-            this.lblSelectedFacilityMaintCost.Text = "Maintenance Cost: ";
-            // 
-            // lblSelectedFacilityPowerGeneration
-            // 
-            this.lblSelectedFacilityPowerGeneration.AutoSize = true;
-            this.lblSelectedFacilityPowerGeneration.BackColor = System.Drawing.Color.Transparent;
-            this.lblSelectedFacilityPowerGeneration.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectedFacilityPowerGeneration.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblSelectedFacilityPowerGeneration.Location = new System.Drawing.Point(25, 80);
-            this.lblSelectedFacilityPowerGeneration.Name = "lblSelectedFacilityPowerGeneration";
-            this.lblSelectedFacilityPowerGeneration.Size = new System.Drawing.Size(104, 16);
-            this.lblSelectedFacilityPowerGeneration.TabIndex = 9;
-            this.lblSelectedFacilityPowerGeneration.Text = "Power Generation: ";
-            // 
-            // lblSelectedFacilityRevenue
-            // 
-            this.lblSelectedFacilityRevenue.AutoSize = true;
-            this.lblSelectedFacilityRevenue.BackColor = System.Drawing.Color.Transparent;
-            this.lblSelectedFacilityRevenue.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectedFacilityRevenue.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblSelectedFacilityRevenue.Location = new System.Drawing.Point(25, 106);
-            this.lblSelectedFacilityRevenue.Name = "lblSelectedFacilityRevenue";
-            this.lblSelectedFacilityRevenue.Size = new System.Drawing.Size(57, 16);
-            this.lblSelectedFacilityRevenue.TabIndex = 10;
-            this.lblSelectedFacilityRevenue.Text = "Revenue: ";
-            // 
-            // lblSelectedFacilityPollution
-            // 
-            this.lblSelectedFacilityPollution.AutoSize = true;
-            this.lblSelectedFacilityPollution.BackColor = System.Drawing.Color.Transparent;
-            this.lblSelectedFacilityPollution.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectedFacilityPollution.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblSelectedFacilityPollution.Location = new System.Drawing.Point(25, 132);
-            this.lblSelectedFacilityPollution.Name = "lblSelectedFacilityPollution";
-            this.lblSelectedFacilityPollution.Size = new System.Drawing.Size(56, 16);
-            this.lblSelectedFacilityPollution.TabIndex = 11;
-            this.lblSelectedFacilityPollution.Text = "Pollution: ";
+            this.lblSelectedFacilityLocation.AutoSize = true;
+            this.lblSelectedFacilityLocation.BackColor = System.Drawing.Color.Transparent;
+            this.lblSelectedFacilityLocation.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectedFacilityLocation.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblSelectedFacilityLocation.Location = new System.Drawing.Point(25, 184);
+            this.lblSelectedFacilityLocation.Name = "lblSelectedFacilityLocation";
+            this.lblSelectedFacilityLocation.Size = new System.Drawing.Size(71, 16);
+            this.lblSelectedFacilityLocation.TabIndex = 13;
+            this.lblSelectedFacilityLocation.Text = "Location: (,)";
             // 
             // lblSelectedFacilityPopulation
             // 
@@ -262,17 +214,65 @@ namespace SimSpace_JAT
             this.lblSelectedFacilityPopulation.TabIndex = 12;
             this.lblSelectedFacilityPopulation.Text = "Population: ";
             // 
-            // lblSelectedFacilityLocation
+            // lblSelectedFacilityPollution
             // 
-            this.lblSelectedFacilityLocation.AutoSize = true;
-            this.lblSelectedFacilityLocation.BackColor = System.Drawing.Color.Transparent;
-            this.lblSelectedFacilityLocation.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectedFacilityLocation.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblSelectedFacilityLocation.Location = new System.Drawing.Point(25, 184);
-            this.lblSelectedFacilityLocation.Name = "lblSelectedFacilityLocation";
-            this.lblSelectedFacilityLocation.Size = new System.Drawing.Size(71, 16);
-            this.lblSelectedFacilityLocation.TabIndex = 13;
-            this.lblSelectedFacilityLocation.Text = "Location: (,)";
+            this.lblSelectedFacilityPollution.AutoSize = true;
+            this.lblSelectedFacilityPollution.BackColor = System.Drawing.Color.Transparent;
+            this.lblSelectedFacilityPollution.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectedFacilityPollution.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblSelectedFacilityPollution.Location = new System.Drawing.Point(25, 132);
+            this.lblSelectedFacilityPollution.Name = "lblSelectedFacilityPollution";
+            this.lblSelectedFacilityPollution.Size = new System.Drawing.Size(56, 16);
+            this.lblSelectedFacilityPollution.TabIndex = 11;
+            this.lblSelectedFacilityPollution.Text = "Pollution: ";
+            // 
+            // lblSelectedFacilityRevenue
+            // 
+            this.lblSelectedFacilityRevenue.AutoSize = true;
+            this.lblSelectedFacilityRevenue.BackColor = System.Drawing.Color.Transparent;
+            this.lblSelectedFacilityRevenue.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectedFacilityRevenue.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblSelectedFacilityRevenue.Location = new System.Drawing.Point(25, 106);
+            this.lblSelectedFacilityRevenue.Name = "lblSelectedFacilityRevenue";
+            this.lblSelectedFacilityRevenue.Size = new System.Drawing.Size(57, 16);
+            this.lblSelectedFacilityRevenue.TabIndex = 10;
+            this.lblSelectedFacilityRevenue.Text = "Revenue: ";
+            // 
+            // lblSelectedFacilityPowerGeneration
+            // 
+            this.lblSelectedFacilityPowerGeneration.AutoSize = true;
+            this.lblSelectedFacilityPowerGeneration.BackColor = System.Drawing.Color.Transparent;
+            this.lblSelectedFacilityPowerGeneration.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectedFacilityPowerGeneration.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblSelectedFacilityPowerGeneration.Location = new System.Drawing.Point(25, 80);
+            this.lblSelectedFacilityPowerGeneration.Name = "lblSelectedFacilityPowerGeneration";
+            this.lblSelectedFacilityPowerGeneration.Size = new System.Drawing.Size(104, 16);
+            this.lblSelectedFacilityPowerGeneration.TabIndex = 9;
+            this.lblSelectedFacilityPowerGeneration.Text = "Power Generation: ";
+            // 
+            // lblSelectedFacilityMaintCost
+            // 
+            this.lblSelectedFacilityMaintCost.AutoSize = true;
+            this.lblSelectedFacilityMaintCost.BackColor = System.Drawing.Color.Transparent;
+            this.lblSelectedFacilityMaintCost.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectedFacilityMaintCost.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblSelectedFacilityMaintCost.Location = new System.Drawing.Point(25, 55);
+            this.lblSelectedFacilityMaintCost.Name = "lblSelectedFacilityMaintCost";
+            this.lblSelectedFacilityMaintCost.Size = new System.Drawing.Size(105, 16);
+            this.lblSelectedFacilityMaintCost.TabIndex = 8;
+            this.lblSelectedFacilityMaintCost.Text = "Maintenance Cost: ";
+            // 
+            // lblSelectedFacilityName
+            // 
+            this.lblSelectedFacilityName.AutoSize = true;
+            this.lblSelectedFacilityName.BackColor = System.Drawing.Color.Transparent;
+            this.lblSelectedFacilityName.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectedFacilityName.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblSelectedFacilityName.Location = new System.Drawing.Point(14, 19);
+            this.lblSelectedFacilityName.Name = "lblSelectedFacilityName";
+            this.lblSelectedFacilityName.Size = new System.Drawing.Size(137, 27);
+            this.lblSelectedFacilityName.TabIndex = 7;
+            this.lblSelectedFacilityName.Text = "FacilityName";
             // 
             // PlanetJackForm
             // 
@@ -286,7 +286,7 @@ namespace SimSpace_JAT
             this.Controls.Add(this.btnSave);
             this.DoubleBuffered = true;
             this.Name = "PlanetJackForm";
-            this.Text = "SimSpace_JAT Large (30 x 30)";
+            this.Text = "SimSpace_JAT Small (20 x 20)";
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PlanetJackForm_MouseClick);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PlanetJackForm_MouseDown);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PlanetJackForm_MouseUp);
