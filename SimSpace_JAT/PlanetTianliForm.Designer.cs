@@ -187,13 +187,14 @@
             this.pnlFacilityStats.Name = "pnlFacilityStats";
             this.pnlFacilityStats.Size = new System.Drawing.Size(302, 217);
             this.pnlFacilityStats.TabIndex = 2;
+            this.pnlFacilityStats.Visible = false;
             // 
             // lblSelectedFacilityName
             // 
             this.lblSelectedFacilityName.AutoSize = true;
             this.lblSelectedFacilityName.BackColor = System.Drawing.Color.Transparent;
             this.lblSelectedFacilityName.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectedFacilityName.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblSelectedFacilityName.ForeColor = System.Drawing.Color.DarkBlue;
             this.lblSelectedFacilityName.Location = new System.Drawing.Point(14, 19);
             this.lblSelectedFacilityName.Name = "lblSelectedFacilityName";
             this.lblSelectedFacilityName.Size = new System.Drawing.Size(137, 27);
@@ -205,7 +206,7 @@
             this.lblSelectedFacilityMaintCost.AutoSize = true;
             this.lblSelectedFacilityMaintCost.BackColor = System.Drawing.Color.Transparent;
             this.lblSelectedFacilityMaintCost.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectedFacilityMaintCost.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblSelectedFacilityMaintCost.ForeColor = System.Drawing.Color.DarkBlue;
             this.lblSelectedFacilityMaintCost.Location = new System.Drawing.Point(25, 55);
             this.lblSelectedFacilityMaintCost.Name = "lblSelectedFacilityMaintCost";
             this.lblSelectedFacilityMaintCost.Size = new System.Drawing.Size(105, 16);
@@ -217,7 +218,7 @@
             this.lblSelectedFacilityPowerUsage.AutoSize = true;
             this.lblSelectedFacilityPowerUsage.BackColor = System.Drawing.Color.Transparent;
             this.lblSelectedFacilityPowerUsage.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectedFacilityPowerUsage.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblSelectedFacilityPowerUsage.ForeColor = System.Drawing.Color.DarkBlue;
             this.lblSelectedFacilityPowerUsage.Location = new System.Drawing.Point(25, 80);
             this.lblSelectedFacilityPowerUsage.Name = "lblSelectedFacilityPowerUsage";
             this.lblSelectedFacilityPowerUsage.Size = new System.Drawing.Size(78, 16);
@@ -229,7 +230,7 @@
             this.lblSelectedFacilityRevenue.AutoSize = true;
             this.lblSelectedFacilityRevenue.BackColor = System.Drawing.Color.Transparent;
             this.lblSelectedFacilityRevenue.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectedFacilityRevenue.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblSelectedFacilityRevenue.ForeColor = System.Drawing.Color.DarkBlue;
             this.lblSelectedFacilityRevenue.Location = new System.Drawing.Point(25, 106);
             this.lblSelectedFacilityRevenue.Name = "lblSelectedFacilityRevenue";
             this.lblSelectedFacilityRevenue.Size = new System.Drawing.Size(57, 16);
@@ -241,7 +242,7 @@
             this.lblSelectedFacilityPollution.AutoSize = true;
             this.lblSelectedFacilityPollution.BackColor = System.Drawing.Color.Transparent;
             this.lblSelectedFacilityPollution.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectedFacilityPollution.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblSelectedFacilityPollution.ForeColor = System.Drawing.Color.DarkBlue;
             this.lblSelectedFacilityPollution.Location = new System.Drawing.Point(25, 132);
             this.lblSelectedFacilityPollution.Name = "lblSelectedFacilityPollution";
             this.lblSelectedFacilityPollution.Size = new System.Drawing.Size(56, 16);
@@ -253,7 +254,7 @@
             this.lblSelectedFacilityPopulation.AutoSize = true;
             this.lblSelectedFacilityPopulation.BackColor = System.Drawing.Color.Transparent;
             this.lblSelectedFacilityPopulation.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectedFacilityPopulation.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblSelectedFacilityPopulation.ForeColor = System.Drawing.Color.DarkBlue;
             this.lblSelectedFacilityPopulation.Location = new System.Drawing.Point(25, 158);
             this.lblSelectedFacilityPopulation.Name = "lblSelectedFacilityPopulation";
             this.lblSelectedFacilityPopulation.Size = new System.Drawing.Size(66, 16);
@@ -265,7 +266,7 @@
             this.lblSelectedFacilityLocation.AutoSize = true;
             this.lblSelectedFacilityLocation.BackColor = System.Drawing.Color.Transparent;
             this.lblSelectedFacilityLocation.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectedFacilityLocation.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblSelectedFacilityLocation.ForeColor = System.Drawing.Color.DarkBlue;
             this.lblSelectedFacilityLocation.Location = new System.Drawing.Point(25, 184);
             this.lblSelectedFacilityLocation.Name = "lblSelectedFacilityLocation";
             this.lblSelectedFacilityLocation.Size = new System.Drawing.Size(71, 16);
@@ -285,6 +286,7 @@
             this.DoubleBuffered = true;
             this.Name = "PlanetTianliForm";
             this.Text = "SimSpace_JAT Large (30 x 30)";
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PlanetTianliForm_MouseClick);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PlanetTianliForm_MouseDown);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PlanetTianliForm_MouseUp);
             this.pnlScoreBoard.ResumeLayout(false);

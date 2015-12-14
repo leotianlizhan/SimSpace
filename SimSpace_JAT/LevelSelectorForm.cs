@@ -21,7 +21,6 @@ namespace SimSpace_JAT
         {
             private Point _location;
             private Point _velocity;
-            private int _size;
             public Point Location
             {
                 get
@@ -43,18 +42,7 @@ namespace SimSpace_JAT
                 {
                     _velocity = value;
                 }
-            }
-            public int Size
-            {
-                get
-                {
-                    return _size;
-                }
-                set
-                {
-                    _location = _size;
-                }
-            }
+            }            
         }
         public LevelSelectorForm()
         {

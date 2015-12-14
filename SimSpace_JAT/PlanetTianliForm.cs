@@ -120,6 +120,7 @@ namespace SimSpace_JAT
             UpdateScoreBoard();
         }
 
+        // Tianli did Scoreboard, Andrew did FacilityStats
         /// <summary>
         /// Initializes the side options, including scoreboard and save button
         /// </summary>
@@ -136,6 +137,10 @@ namespace SimSpace_JAT
             pnlScoreBoard.BackColor = Color.FromArgb(160, Color.SkyBlue);
             //change the save button's color
             btnSave.BackColor = Color.FromArgb(160, Color.SkyBlue);
+            // Align the location of the facility stats panel to its proper position below the save button
+            pnlFacilityStats.Location = new Point(xLocation, btnSave.Location.Y + btnSave.Size.Height + _toolbarCellSize.Width * 2 / 5);
+            //change the facilitystats's color
+            pnlFacilityStats.BackColor = Color.FromArgb(160, Color.SkyBlue);
         }
 
         //Tianli
@@ -402,6 +407,11 @@ namespace SimSpace_JAT
             _planet.UpdateTime();
             //update the score board
             UpdateScoreBoard();
+            // Attempt asteroid strike on the planet
+            if (_planet.AttemptAsteroidStrike() == true)
+            {
+                MessageBox.Show("Asteroid Struck... IMPLEMENT ENDING SCREEN");
+            }
         }
 
         //Tianli
@@ -431,6 +441,136 @@ namespace SimSpace_JAT
         private void btnSave_MouseLeave(object sender, EventArgs e)
         {
             btnSave.ForeColor = Color.White;
+        }
+
+        // Section done by Andrew
+        private void PlanetTianliForm_MouseClick(object sender, MouseEventArgs e)
+        {
+            // Check if nothing is selected
+            if (_selectedToolbarItem == NOTHING)
+            {
+                // Loop throught the grid to find one which one the user clicked on
+                for (int i = 0; i < GRID_SIZE; i++)
+                {
+                    for (int j = 0; j < GRID_SIZE; j++)
+                    {
+                        if (_grid[i, j].Rect.Contains(e.Location))
+                        {
+                            // Find out what the facility that was clicked was 
+                            if (_planet.Facilities[i, j] is EmergencyServices) // if facility was emergency services
+                            {
+                                // Display the name of the facility in the side bar
+                                lblSelectedFacilityName.Text = "Emergency Services";
+
+                                // Show the facility stats side panel
+                                pnlFacilityStats.Visible = true;
+                            }
+                            else if (_planet.Facilities[i, j] is School)
+                            {
+                                // Display the name of the facility in the side bar
+                                lblSelectedFacilityName.Text = "School";
+
+                                // Show the facility stats side panel
+                                pnlFacilityStats.Visible = true;
+                            }
+                            else if (_planet.Facilities[i, j] is MedicalFacility)
+                            {
+                                // Display the name of the facility in the side bar
+                                lblSelectedFacilityName.Text = "Medical Facility";
+
+                                // Show the facility stats side panel
+                                pnlFacilityStats.Visible = true;
+                            }
+                            else if (_planet.Facilities[i, j] is GovernmentFacility)
+                            {
+                                // Display the name of the facility in the side bar
+                                lblSelectedFacilityName.Text = "Government Facility";
+
+                                // Show the facility stats side panel
+                                pnlFacilityStats.Visible = true;
+                            }
+                            else if (_planet.Facilities[i, j] is Powerplant)
+                            {
+                                // Display the name of the facility in the side bar
+                                lblSelectedFacilityName.Text = "Power Plant";
+
+                                // Show the facility stats side panel
+                                pnlFacilityStats.Visible = true;
+                            }
+                            else if (_planet.Facilities[i, j] is LuxuryHome)
+                            {
+                                // Display the name of the facility in the side bar
+                                lblSelectedFacilityName.Text = "Luxury Home";
+
+                                // Show the facility stats side panel
+                                pnlFacilityStats.Visible = true;
+                            }
+                            else if (_planet.Facilities[i, j] is ComfortableHome)
+                            {
+                                // Display the name of the facility in the side bar
+                                lblSelectedFacilityName.Text = "Comfortable Home";
+
+                                // Show the facility stats side panel
+                                pnlFacilityStats.Visible = true;
+                            }
+                            else if (_planet.Facilities[i, j] is AffordableHome)
+                            {
+                                // Display the name of the facility in the side bar
+                                lblSelectedFacilityName.Text = "Affordable Home";
+
+                                // Show the facility stats side panel
+                                pnlFacilityStats.Visible = true;
+                            }
+                            else if (_planet.Facilities[i, j] is Factory)
+                            {
+                                // Display the name of the facility in the side bar
+                                lblSelectedFacilityName.Text = "Factory";
+
+                                // Show the facility stats side panel
+                                pnlFacilityStats.Visible = true;
+                            }
+                            else if (_planet.Facilities[i, j] is EnvironmentalFacility)
+                            {
+                                // Display the name of the facility in the side bar
+                                lblSelectedFacilityName.Text = "Environmental Facility";
+
+                                // Show the facility stats side panel
+                                pnlFacilityStats.Visible = true;
+                            }
+                            else if (_planet.Facilities[i, j] is Store)
+                            {
+                                // Display the name of the facility in the side bar
+                                lblSelectedFacilityName.Text = "Store";
+
+                                // Show the facility stats side panel
+                                pnlFacilityStats.Visible = true;
+                            }
+                            else if (_planet.Facilities[i, j] is Restaurant)
+                            {
+                                // Display the name of the facility in the side bar
+                                lblSelectedFacilityName.Text = "Restaurant";
+
+                                // Show the facility stats side panel
+                                pnlFacilityStats.Visible = true;
+                            }
+                            else if (_planet.Facilities[i, j] is Office)
+                            {
+                                // Display the name of the facility in the side bar
+                                lblSelectedFacilityName.Text = "Office";
+
+                                // Show the facility stats side panel
+                                pnlFacilityStats.Visible = true;
+                            }
+                            else // if the facility type is not recognized or is dirt
+                            {
+                                // Hide the facility stats side panel
+                                pnlFacilityStats.Visible = false;
+                            }
+                        }
+                        
+                    }
+                }
+            }
         }
     }
 }
